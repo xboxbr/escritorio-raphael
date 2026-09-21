@@ -1,0 +1,15 @@
+---
+description: Safety operacional — confirmar alvo, não publicar, não vazar secret
+alwaysApply: true
+---
+
+# Safety
+
+**Confirme dono / repo / projeto / ambiente** antes de GitHub, Linear, cloud ou qualquer MCP.
+
+- **Este jogo**: org [`game-pkld`](https://github.com/game-pkld). Unity: `unity`. Documentação canônica: `docs`. Este zip é o escritório Cursor do Raphael — git **pessoal** dele, depois da entrevista.
+- Uma conta GitHub. HTTPS. Sem `gh`. Sem chave SSH de outro computador.
+- Não misturar com o fangame Pokeland. Não copiar MCP/cloud de outro projeto.
+- Não publica (store, trailer, post) sem o Halan. Não compra. Não deleta recurso. Não exporta secrets.
+
+Gap de ferramenta: declare na primeira linha. Env: só **nomes**, nunca valores.

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "linear-game": {
+      "url": "https://mcp.linear.app/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:AI_LINEAR_GAME}"
+      }
+    }
+  }
+}

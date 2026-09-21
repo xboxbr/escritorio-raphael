@@ -1,0 +1,29 @@
+---
+description: Convenções do vault Obsidian (cérebro do jogo original)
+globs: base-de-conhecimento/**/*.md
+alwaysApply: false
+---
+
+# Vault
+
+Cérebro em `base-de-conhecimento/`. Abrir no Obsidian por essa pasta, não pela raiz. `AGENTS.md`, `.cursor/` e `.claude/` ficam **fora** do vault. Skill: `cerebro-obsidian`.
+
+**Mapa**: `00 - Index.md` · `01 - Jogo/` · `02 - Tech/` · `05 - Decisões/` · `06 - Aprendizados/` · `07 - Pesquisa/`. Entry point de pasta: `00 - …`.
+
+**Consulta** antes de responder sobre o jogo, stack ou decisões. **Escreve** sem pedir quando: fato novo do nosso jogo, decisão > trivial, pesquisa. **Pergunta antes** de apagar/renomear notas, mexer em `.obsidian/` / `.claude/` / `.cursor/`, reorganizar pastas.
+
+Este vault **não** guarda dado do fangame Pokeland. Inspiração ≠ copiar mecânica como se fosse nossa.
+
+Frontmatter em toda nota:
+
+```yaml
+---
+tags: [<pasta>, <tema>]
+data: YYYY-MM-DD
+status: rascunho | revisado
+---
+```
+
+Callouts: `[!info]` ≥2 fontes ou Halan; `[!warning]` 1 fonte / hipótese; `[!quote]` citação; `[!todo]` pendência. Wikilinks `[[Nota]]` livres.
+
+Triangulação em `01 - Jogo/` e `07 - Pesquisa/`: ≥2 fontes → info; 1 → warning; divergem → as duas; nada → "não encontrei". Nunca chute.

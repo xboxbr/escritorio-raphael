@@ -1,0 +1,11 @@
+.claude/settings.local.json
+**/settings.local.json
+.env
+.env.*
+!.env.example
+.mcp.json
+*.local
+base-de-conhecimento/.obsidian/workspace.json
+base-de-conhecimento/.obsidian/workspace-mobile.json
+.DS_Store
+Thumbs.db
