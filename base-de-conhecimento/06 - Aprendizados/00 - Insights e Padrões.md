@@ -1,6 +1,6 @@
 ---
 tags: [aprendizados, insights]
-data: 2026-09-10
+data: 2026-09-23
 status: revisado
 ---
 
@@ -31,6 +31,24 @@ Ainda cedo. Grava quando o padrão aparecer ≥ 2 vezes.
 **O que**: Duas horas não nomearam o próximo Play no fim. No meio, a sala descreveu o mínimo: quadrado, times que se batem.
 **Por quê**: Refs e modos enchem o relógio; o cubo cabe numa frase.
 **Como aplicar**: Se a call não fechar o item 15, Douglas nomeia o mínimo que já foi dito e trata o resto como homework.
+
+### Silhueta vence textura e cor
+
+**O que**: Cubo com albedo de pedra ainda lê como bloco. Burst colorido ainda lê como a mesma skill.
+**Por quê**: O olho fecha a forma primeiro; tiling e hue vêm depois.
+**Como aplicar**: Rocha de previz = esferas amontoadas. Skill = formato diferente (espinho, raio, pilar), não o mesmo flash pintado.
+
+### Serrilhado ≠ cubo
+
+**O que**: A previz lia “Minecraft” por dois motivos juntos: primitivas `Cube` na caverna e anti-aliasing desligado (URP Deferred, MSAA=1, câmera `None`).
+**Por quê**: Filtro (SMAA, bloom, grain) suaviza pixel da borda. Não muda silhueta de parede-caixa. Fotoreal de bicho continua Meshy, não post-process.
+**Como aplicar**: Jagged → SMAA High na câmera (TAA fantasma nos VFX). Quadrado → cilindro/esfera, não cubo. Não vender filtro como arte final.
+
+### Canto do mapa ≠ canto da câmera
+
+**O que**: Colunas de tijolo no canto geométrico da sala (`z ≈ -7.5`, boca da caverna) não apareceram no Play.
+**Por quê**: Câmera 3/4 em `(5.1, 5.7, -9)` deixa esses cantos fora do frustum; o olho só vê o que a lente enquadra.
+**Como aplicar**: Peça “canto visível” → colocar no frustum (perto das paredes laterais, `z ≈ -1.6`), não no canto do mesh.
 
 ## Notas relacionadas
 
