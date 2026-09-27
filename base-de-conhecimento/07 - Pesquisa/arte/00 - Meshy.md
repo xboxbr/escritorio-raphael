@@ -21,6 +21,10 @@ Gerador 3D (text/imagem → mesh). Loop 1 é **3D**. Placeholder interno: plano 
 
 > [!warning] Download no Free: a tabela de planos marca “Model Downloads ❌”. A help do Free é mais específica: **10 downloads/mês só de Meshy 6 Lite**. Meshy 6 e 7 no Free batem paywall. Confirmar no botão Download da web antes de contar com o FBX no `client/`.
 
+## MCP no Cursor (26 set)
+
+Servidor oficial `@meshy-ai/meshy-mcp-server`. Neste escritório entra em `.cursor/mcp.json`, chave só pela variável `MESHY_API_KEY` (nunca o valor no arquivo: o `mcp.json` vai pro git). A help da Meshy diz que a chave de API pede plano **Pro ou acima**. Não assinar sem o Halan. Chave em [settings/api](https://www.meshy.ai/settings/api). Gerar modelo gasta crédito da conta.
+
 ## Como entra no Unity
 
 FBX na pasta `client/Assets/` (arrasta). Personagem: Rig → **Humanoid**. Animação mora no **Animator** (Idle ↔ Walk por velocidade; Wave = trigger). A cápsula do CharacterController fica — o mesh é só pele. Cubo/chão: FBX estático, MeshCollider.
