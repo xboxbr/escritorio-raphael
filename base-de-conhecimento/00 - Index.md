@@ -20,6 +20,7 @@ Cérebro do **Douglas** neste jogo original. Pasta de trabalho: `e:\dev\game`. F
 - [[01 - Unity - Licença e custo]] — o que pagamos (Personal / Pro / MIT)
 - [[02 - Produção Loop 1]] — ferramentas e mãos deste slice
 - [[00 - Meshy]] — 3D placeholder
+- [[00 - Rig automático]] — Meshy, Tripo, Mixamo: quem entrega esqueleto e o preço
 - [[00 - Higgsfield]] — conceito/imagem; não é o motor
 - [[00 - Log de Decisões]] — o que vale agora
 - [[00 - GPT-6 Astra vs Cursor]] — modelo vs editor (Raphael)

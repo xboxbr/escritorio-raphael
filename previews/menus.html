@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bichos — visual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@360;500;650&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #07080c;
+    --panel: rgba(12, 16, 24, 0.88);
+    --gold: #e6c56b;
+    --gold-dim: #8d7340;
+    --cyan: #8ef6ff;
+    --cyan-dim: #1c7388;
+    --ember: #ff8b45;
+    --paper: #e7eef6;
+    --mute: #9aa6b5;
+    --line: rgba(230, 197, 107, 0.45);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(900px 480px at 50% 40%, #141a28 0%, var(--ink) 68%);
+    color: var(--paper);
+    font-family: Outfit, "Segoe UI", sans-serif;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(142, 246, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(142, 246, 255, 0.04) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at 50% 45%, #000 20%, transparent 75%);
+  }
+  .stage {
+    position: relative;
+    width: min(1480px, 98vw, calc(94vh * 16 / 9));
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background:
+      radial-gradient(520px 280px at 50% 62%, rgba(230, 197, 107, 0.08), transparent 70%),
+      radial-gradient(640px 360px at 70% 40%, rgba(28, 115, 136, 0.22), transparent 72%),
+      linear-gradient(180deg, #10151f 0%, #090b10 100%);
+    box-shadow:
+      0 0 0 1px rgba(230, 197, 107, 0.35),
+      0 30px 80px rgba(0, 0, 0, 0.55);
+  }
+  .stage::before, .stage::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    z-index: 5;
+    pointer-events: none;
+    border: 1px solid var(--gold);
+  }
+  .stage::before { top: 10px; left: 10px; border-right: 0; border-bottom: 0; }
+  .stage::after { right: 10px; bottom: 10px; border-left: 0; border-top: 0; }
+  .corner-tr, .corner-bl {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    z-index: 5;
+    pointer-events: none;
+    border: 1px solid var(--cyan);
+    opacity: 0.7;
+  }
+  .corner-tr { top: 10px; right: 10px; border-left: 0; border-bottom: 0; }
+  .corner-bl { left: 10px; bottom: 10px; border-right: 0; border-top: 0; }
+
+  .top {
+    position: absolute;
+    top: 18px;
+    left: 28px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 4;
+  }
+  .mark {
+    font-family: Cinzel, Palatino, serif;
+    letter-spacing: 0.28em;
+    font-size: 13px;
+    color: var(--gold);
+  }
+  .mark small {
+    display: block;
+    margin-top: 3px;
+    letter-spacing: 0.18em;
+    font-family: Outfit, sans-serif;
+    font-size: 10px;
+    color: var(--mute);
+  }
+  .switch {
+    display: flex;
+    gap: 6px;
+  }
+  .switch button, .bar button, .rail button, .drop button, .back {
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  .switch button {
+    border: 1px solid rgba(142, 246, 255, 0.25);
+    background: rgba(8, 12, 18, 0.7);
+    color: var(--mute);
+    padding: 6px 12px;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  .switch button.on {
+    color: var(--ink);
+    background: linear-gradient(180deg, #d7fbff, var(--cyan));
+    border-color: var(--cyan);
+  }
+
+  .row-wrap {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    top: 78px;
+    bottom: 92px;
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .chev {
+    width: 36px;
+    flex: none;
+    border: 1px solid var(--line);
+    background: rgba(8, 10, 16, 0.55);
+    color: var(--gold);
+    font-size: 22px;
+  }
+  .chev:disabled { opacity: 0.28; cursor: default; }
+  .scroller {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    padding: 8px 4px 0;
+    cursor: grab;
+  }
+  .scroller::-webkit-scrollbar { display: none; }
+  .scroller.dragging { cursor: grabbing; scroll-behavior: auto; }
+  .card {
+    flex: 0 0 calc((100% - 72px) / 10);
+    min-width: 92px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .dais {
+    width: 100%;
+    height: 72%;
+    display: grid;
+    place-items: end center;
+    position: relative;
+  }
+  .dais img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: screen;
+    filter: contrast(1.08) saturate(1.15) drop-shadow(0 10px 8px rgba(0, 0, 0, 0.35));
+    pointer-events: none;
+  }
+  .ring {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: 8%;
+    height: 28%;
+    border-radius: 50%;
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(142, 246, 255, 0.28), rgba(142, 246, 255, 0.02) 68%),
+      repeating-radial-gradient(circle at 50% 50%, transparent 0 7px, rgba(230, 197, 107, 0.35) 8px 9px);
+    box-shadow: 0 0 0 1px rgba(230, 197, 107, 0.35), inset 0 0 12px rgba(142, 246, 255, 0.25);
+  }
+  .ring::after {
+    content: "";
+    position: absolute;
+    inset: 18% 22%;
+    border-radius: 50%;
+    border: 1px dashed rgba(142, 246, 255, 0.45);
+  }
+  .who {
+    margin-top: 4px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .pow {
+    font-variant-numeric: tabular-nums;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  .bar {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: linear-gradient(180deg, rgba(18, 24, 34, 0.95), rgba(8, 10, 16, 0.95));
+    border: 1px solid rgba(142, 246, 255, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(230, 197, 107, 0.12);
+  }
+  .drop { position: relative; flex: 0 0 210px; height: 100%; }
+  .drop > button, .seg button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(142, 246, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    letter-spacing: 0.04em;
+    font-size: 13px;
+  }
+  .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(100% + 6px);
+    display: none;
+    background: #0c1118;
+    border: 1px solid var(--line);
+    z-index: 6;
+  }
+  .drop.open .menu { display: block; }
+  .menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 10px;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: transparent;
+    color: var(--paper);
+    font-size: 13px;
+  }
+  .menu button:hover, .menu button.on { background: rgba(142, 246, 255, 0.12); color: var(--cyan); }
+  .seg { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; height: 100%; }
+  .seg button.on {
+    color: var(--ink);
+    background: linear-gradient(180deg, #f3fbff, #8ef6ff);
+    border-color: transparent;
+    font-weight: 650;
+  }
+  .whisper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    text-align: center;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    pointer-events: none;
+  }
+
+  .sheet {
+    position: absolute;
+    inset: 64px 18px 18px;
+    display: none;
+    grid-template-columns: 1.15fr 1fr 108px;
+    gap: 12px;
+  }
+  .sheet.on { display: grid; }
+  .hero, .panel, .rail {
+    background: var(--panel);
+    border: 1px solid rgba(230, 197, 107, 0.22);
+    position: relative;
+  }
+  .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+  .hero .dais { height: 62%; width: 78%; }
+  .hero h2 {
+    margin: 8px 0 0;
+    font-family: Cinzel, Palatino, serif;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    font-size: 26px;
+  }
+  .back {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--gold);
+    padding: 4px 10px;
+    letter-spacing: 0.12em;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  .panel { padding: 16px 16px 12px; overflow: auto; display: flex; flex-direction: column; }
+  .panel h3 {
+    margin: 0 0 12px;
+    font-family: Cinzel, Palatino, serif;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    color: var(--gold);
+  }
+  .stats { display: grid; grid-template-columns: 1fr 190px; gap: 18px 16px; align-items: center; flex: 1; }
+  .stat { display: grid; grid-template-columns: 78px 1fr 40px; gap: 8px; align-items: center; font-size: 14px; color: var(--mute); margin: 7px 0; }
+  .stat b { color: var(--paper); font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .track { height: 7px; background: rgba(255, 255, 255, 0.06); position: relative; }
+  .track i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dim), var(--cyan));
+    box-shadow: 0 0 8px rgba(142, 246, 255, 0.45);
+  }
+  .hex { width: 190px; height: 190px; }
+  .skills { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .skill {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 8px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    padding: 8px 16px 8px 0;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent 46%),
+      rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .skill .accent { height: 72%; min-height: 48px; align-self: center; }
+  .skill .meta { color: var(--mute); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .skill strong { display: block; font-size: 22px; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .skill .num {
+    font-family: Cinzel, Palatino, serif;
+    font-size: 40px;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums;
+  }
+  .skill .track { margin-top: 8px; }
+  .empty {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--mute);
+    letter-spacing: 0.06em;
+    padding: 24px;
+    line-height: 1.5;
+  }
+  .rail { display: flex; flex-direction: column; padding: 6px; gap: 4px; }
+  .rail button {
+    flex: 1;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--mute);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .rail button.on {
+    color: var(--cyan);
+    border-color: rgba(142, 246, 255, 0.45);
+    background: rgba(142, 246, 255, 0.08);
+    box-shadow: inset 2px 0 0 var(--gold);
+  }
+  .hide-row .row-wrap, .hide-row .bar, .hide-row .whisper { display: none; }
+</style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <i class="corner-tr"></i>
+    <i class="corner-bl"></i>
+    <div class="top">
+      <div class="mark" id="mark">Coleção<small>santuário / sinal</small></div>
+      <div class="switch">
+        <button type="button" id="tab-row" class="on">Fileira</button>
+        <button type="button" id="tab-sheet">Ficha</button>
+      </div>
+    </div>
+
+    <div class="row-wrap">
+      <button class="chev" id="prev" type="button" aria-label="Anterior">‹</button>
+      <div class="scroller" id="scroller"></div>
+      <button class="chev" id="next" type="button" aria-label="Próximo">›</button>
+    </div>
+    <div class="whisper" id="whisper"></div>
+    <div class="bar">
+      <div class="drop" id="drop">
+        <button type="button" id="drop-btn">Todos os atributos</button>
+        <div class="menu" id="menu"></div>
+      </div>
+      <div class="seg" id="seg"></div>
+    </div>
+
+    <div class="sheet" id="sheet">
+      <div class="hero" id="hero"></div>
+      <div class="panel" id="panel"></div>
+      <div class="rail" id="rail"></div>
+    </div>
+  </div>
+
+<script>
+const roster = [
+  {id:1,name:"Carnivora",hp:92,speed:14,pa:18,sa:8,pd:14,sd:9,power:170,skills:[{kind:0,dmg:9},{kind:1,dmg:14},{kind:0,dmg:20}]},
+  {id:2,name:"Furia",hp:78,speed:12,pa:11,sa:17,pd:8,sd:13,power:140,skills:[{kind:0,dmg:7},{kind:1,dmg:16},{kind:1,dmg:18}]},
+  {id:3,name:"Tampa",hp:110,speed:7,pa:15,sa:10,pd:16,sd:11,power:128,skills:[{kind:0,dmg:11},{kind:0,dmg:12},{kind:1,dmg:17}]},
+  {id:4,name:"Musgo",hp:84,speed:11,pa:9,sa:15,pd:12,sd:16,power:117,skills:[{kind:1,dmg:8},{kind:1,dmg:13},{kind:0,dmg:15}]},
+  {id:5,name:"Nuvem",hp:79,speed:16,pa:13,sa:12,pd:7,sd:8,power:109,skills:[{kind:0,dmg:6},{kind:0,dmg:11},{kind:1,dmg:14}]},
+  {id:6,name:"Eco",hp:100,speed:9,pa:16,sa:9,pd:18,sd:10,power:98,skills:[{kind:0,dmg:10},{kind:1,dmg:9},{kind:0,dmg:16}]},
+  {id:7,name:"Limo",hp:66,speed:13,pa:8,sa:19,pd:9,sd:15,power:86,skills:[{kind:1,dmg:5},{kind:1,dmg:15},{kind:1,dmg:13}]},
+  {id:8,name:"Galho",hp:96,speed:8,pa:14,sa:14,pd:13,sd:12,power:74,skills:[{kind:0,dmg:12},{kind:0,dmg:10},{kind:1,dmg:12}]},
+  {id:9,name:"Pingo",hp:120,speed:6,pa:17,sa:7,pd:19,sd:14,power:63,skills:[{kind:0,dmg:13},{kind:1,dmg:8},{kind:0,dmg:11}]},
+  {id:10,name:"Pinça",hp:74,speed:10,pa:12,sa:13,pd:11,sd:17,power:51,skills:[{kind:1,dmg:8},{kind:0,dmg:12},{kind:1,dmg:19}]},
+  {id:11,name:"Espinho",hp:100,speed:9,pa:14,sa:11,pd:12,sd:10,power:96,skills:[{kind:0,dmg:9},{kind:1,dmg:14},{kind:0,dmg:20}]},
+  {id:12,name:"Escama",hp:78,speed:16,pa:9,sa:15,pd:8,sd:12,power:84,skills:[{kind:0,dmg:8},{kind:0,dmg:13},{kind:1,dmg:18}]},
+  {id:13,name:"Antena",hp:86,speed:11,pa:8,sa:16,pd:10,sd:13,power:71,skills:[{kind:1,dmg:10},{kind:0,dmg:12},{kind:1,dmg:16}]},
+  {id:14,name:"Farpa",hp:120,speed:6,pa:13,sa:7,pd:15,sd:9,power:58,skills:[{kind:0,dmg:11},{kind:1,dmg:9},{kind:0,dmg:17}]}
+];
+const skillName = ["Golpe", "Rajada", "Estouro"];
+const attrs = [
+  ["all", "Todos os atributos"],
+  ["hp", "HP"],
+  ["speed", "Velocidade"],
+  ["pa", "Ataque"],
+  ["sa", "Especial"],
+  ["pd", "Defesa"],
+  ["sd", "Defesa especial"]
+];
+const tabs = [
+  ["power", "Power"],
+  ["level", "Nível"],
+  ["intimacy", "Intimidade"],
+  ["fusion", "Fusão"],
+  ["roster", "Padrão"]
+];
+const rails = [
+  ["attr", "Atributos"],
+  ["friend", "Amizade"],
+  ["skills", "Skills"],
+  ["equip", "Equipar"],
+  ["train", "Treino"],
+  ["evolve", "Evoluir"],
+  ["gene", "Gene"]
+];
+
+let attr = "all";
+let tab = "power";
+let view = "row";
+let openId = 1;
+let page = "attr";
+let moved = false;
+
+const scroller = document.getElementById("scroller");
+const stage = document.getElementById("stage");
+
+function portrait(id) {
+  return "../../unity/Assets/Game/Collection/Resources/Portraits/bicho-" + String(id).padStart(2, "0") + ".png";
+}
+function ordered() {
+  const list = roster.slice();
+  const key = attr !== "all" ? attr : (tab === "roster" ? "id" : "power");
+  list.sort((a, b) => {
+    if (key === "id") return a.id - b.id;
+    return b[key] - a[key] || a.id - b.id;
+  });
+  return list;
+}
+function note() {
+  if (attr !== "all") return "";
+  if (tab === "level") return "A ficha não tem nível.";
+  if (tab === "intimacy") return "A ficha não tem intimidade.";
+  if (tab === "fusion") return "A ficha não tem fusão.";
+  return "";
+}
+
+function renderRow() {
+  scroller.innerHTML = "";
+  ordered().forEach(c => {
+    const btn = document.createElement("button");
+    btn.className = "card";
+    btn.type = "button";
+    btn.innerHTML =
+      '<div class="dais"><i class="ring"></i><img alt="" src="' + portrait(c.id) + '"></div>' +
+      '<div class="who">' + c.name + '</div><div class="pow">Power ' + c.power + '</div>';
+    btn.addEventListener("click", () => { if (!moved) openSheet(c.id); });
+    scroller.appendChild(btn);
+  });
+  document.getElementById("whisper").textContent = note();
+  const dropBtn = document.getElementById("drop-btn");
+  dropBtn.textContent = attrs.find(a => a[0] === attr)[1];
+  document.getElementById("menu").innerHTML = attrs.map(a =>
+    '<button type="button" data-attr="' + a[0] + '"' + (a[0] === attr ? ' class="on"' : '') + '>' + a[1] + '</button>'
+  ).join("");
+  document.getElementById("seg").innerHTML = tabs.map(t =>
+    '<button type="button" data-tab="' + t[0] + '"' + (attr === "all" && t[0] === tab ? ' class="on"' : '') + '>' + t[1] + '</button>'
+  ).join("");
+  syncChev();
+}
+
+function statRow(label, value, max) {
+  const pct = Math.max(4, Math.min(100, value / max * 100));
+  return '<div class="stat"><span>' + label + '</span><div class="track"><i style="width:' + pct + '%"></i></div><b>' + value + '</b></div>';
+}
+function hex(c) {
+  const vals = [c.hp / 140, c.speed / 30, c.pa / 40, c.pd / 40, c.sd / 40, c.sa / 40];
+  const cx = 75, cy = 75, r = 58;
+  let pts = "";
+  let grid = "";
+  for (let i = 0; i < 6; i++) {
+    const a = -Math.PI / 2 + i * Math.PI / 3;
+    const x = cx + Math.cos(a) * r * vals[i];
+    const y = cy + Math.sin(a) * r * vals[i];
+    pts += x.toFixed(1) + "," + y.toFixed(1) + " ";
+    const gx = cx + Math.cos(a) * r;
+    const gy = cy + Math.sin(a) * r;
+    grid += '<line x1="' + cx + '" y1="' + cy + '" x2="' + gx.toFixed(1) + '" y2="' + gy.toFixed(1) + '" stroke="rgba(230,197,107,.35)" />';
+  }
+  return '<svg class="hex" viewBox="0 0 150 150">' + grid +
+    '<polygon points="' + pts + '" fill="rgba(142,246,255,.28)" stroke="#e6c56b" stroke-width="1.4"/>' +
+    '</svg>';
+}
+function renderSheet() {
+  const c = roster.find(x => x.id === openId);
+  document.getElementById("hero").innerHTML =
+    '<button class="back" type="button" id="back">Voltar</button>' +
+    '<div class="dais"><i class="ring"></i><img alt="" src="' + portrait(c.id) + '"></div>' +
+    '<h2>' + c.name + '</h2><div class="pow">Power ' + c.power + '</div>';
+  document.getElementById("back").onclick = () => setView("row");
+
+  const panel = document.getElementById("panel");
+  if (page === "attr") {
+    panel.innerHTML = '<h3>Atributos</h3><div class="stats">' +
+      '<div>' +
+      statRow("HP", c.hp, 140) + statRow("Vel", c.speed, 30) +
+      statRow("Ataque", c.pa, 40) + statRow("Especial", c.sa, 40) +
+      statRow("Defesa", c.pd, 40) + statRow("Escudo", c.sd, 40) +
+      '</div>' + hex(c) + '</div>';
+  } else if (page === "skills") {
+    const colors = ["#ff8b45", "#8ef6ff", "#e6c56b"];
+    panel.innerHTML = '<h3>Skills</h3><div class="skills">' + c.skills.map((s, i) => {
+      const tipo = s.kind === 0 ? "Físico" : "Especial";
+      const pct = Math.min(100, s.dmg / 40 * 100);
+      return '<article class="skill"><i class="accent" style="background:' + colors[i] + '"></i><div><strong>' +
+        skillName[i] + '</strong><span class="meta">' + tipo + '</span><div class="track"><i style="width:' + pct + '%;background:' + colors[i] + '"></i></div></div><div class="num">' + s.dmg + '</div></article>';
+    }).join("") + '</div>';
+  } else if (page === "evolve") {
+    panel.innerHTML = '<div class="empty">Evoluir abre a sala da bobina.<br>O bicho maior só aparece no clique.<br>Ainda não evolui de verdade.</div>';
+  } else {
+    const label = rails.find(r => r[0] === page)[1];
+    panel.innerHTML = '<div class="empty">' + label + ' está na coluna.<br>A ficha ainda não tem esse número.</div>';
+  }
+
+  document.getElementById("rail").innerHTML = rails.map(r =>
+    '<button type="button" data-page="' + r[0] + '"' + (r[0] === page ? ' class="on"' : '') + '>' + r[1] + '</button>'
+  ).join("");
+}
+
+function setView(next) {
+  view = next;
+  stage.classList.toggle("hide-row", view === "sheet");
+  document.getElementById("sheet").classList.toggle("on", view === "sheet");
+  document.getElementById("tab-row").classList.toggle("on", view === "row");
+  document.getElementById("tab-sheet").classList.toggle("on", view === "sheet");
+  document.getElementById("mark").innerHTML = view === "row"
+    ? "Coleção<small>santuário / sinal</small>"
+    : "Ficha<small>leitura do corpo</small>";
+  if (view === "sheet") renderSheet();
+}
+function openSheet(id) {
+  openId = id;
+  page = "attr";
+  setView("sheet");
+}
+
+document.getElementById("tab-row").onclick = () => setView("row");
+document.getElementById("tab-sheet").onclick = () => setView("sheet");
+document.getElementById("drop-btn").onclick = () => document.getElementById("drop").classList.toggle("open");
+document.getElementById("menu").onclick = (e) => {
+  const key = e.target.dataset.attr;
+  if (!key) return;
+  attr = key;
+  document.getElementById("drop").classList.remove("open");
+  renderRow();
+};
+document.getElementById("seg").onclick = (e) => {
+  const key = e.target.dataset.tab;
+  if (!key) return;
+  tab = key;
+  if (key === "power" || key === "roster") attr = "all";
+  renderRow();
+};
+document.getElementById("rail").onclick = (e) => {
+  const key = e.target.dataset.page;
+  if (!key) return;
+  page = key;
+  renderSheet();
+};
+
+function syncChev() {
+  document.getElementById("prev").disabled = scroller.scrollLeft < 4;
+  document.getElementById("next").disabled = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 4;
+}
+document.getElementById("prev").onclick = () => scroller.scrollBy({ left: -scroller.clientWidth / 10, behavior: "smooth" });
+document.getElementById("next").onclick = () => scroller.scrollBy({ left: scroller.clientWidth / 10, behavior: "smooth" });
+scroller.addEventListener("scroll", syncChev);
+
+let startX = 0, startLeft = 0;
+scroller.addEventListener("pointerdown", (e) => {
+  moved = false;
+  startX = e.clientX;
+  startLeft = scroller.scrollLeft;
+  scroller.classList.add("dragging");
+  scroller.setPointerCapture(e.pointerId);
+});
+scroller.addEventListener("pointermove", (e) => {
+  if (!scroller.classList.contains("dragging")) return;
+  const dx = e.clientX - startX;
+  if (Math.abs(dx) > 8) moved = true;
+  scroller.scrollLeft = startLeft - dx;
+});
+scroller.addEventListener("pointerup", () => scroller.classList.remove("dragging"));
+
+renderRow();
+</script>
+</body>
+</html>

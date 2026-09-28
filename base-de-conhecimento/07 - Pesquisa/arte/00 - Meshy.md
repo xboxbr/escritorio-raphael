@@ -43,4 +43,4 @@ Protótipo/indie. Auto-rig falha fora de humanoide/quadrupede. Não substitui ar
 
 ## Notas relacionadas
 
-- [[00 - Overview]] · [[02 - Produção Loop 1]] · [[00 - Higgsfield]] · [[00 - Tech - Overview]]
+- [[00 - Overview]] · [[02 - Produção Loop 1]] · [[00 - Higgsfield]] · [[00 - Rig automático]] · [[00 - Tech - Overview]]
