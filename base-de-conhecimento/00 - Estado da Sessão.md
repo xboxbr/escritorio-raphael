@@ -1,6 +1,6 @@
 ---
 tags: [handoff, estado, operacional]
-data: 2026-09-24
+data: 2026-10-01
 status: revisado
 ---
 
@@ -10,7 +10,8 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
-- 30 set, noite: Raphael confirmou no Play a língua, o cristal e o fator no dano. POK-82, POK-83 e POK-84 estão Done. O saldo 38 é o ouro antigo; 94 de dano no cristal credita 0. Código no GitHub do jogo: `44f015e` em `https://github.com/game-pkld/unity.git` (`main`). A cena do cristal ainda ia para os modelos que a Lutar já usa, depois desse save.
+- 1 out: a fila do Raphael no Linear está vazia. POK-85 a POK-90 estão Done. A ficha tem chance de acerto, cinco skills e os quatro números fora do hexágono. O Power usa os pesos novos. A conta do golpe está em StrikeMath; o número que sobe na arena ainda é o dano escrito da skill. Código no GitHub do jogo: `a845420` em `https://github.com/game-pkld/unity.git` (`main`). O HUD místico está no SpriteCook, conceito `ded8e80d-6358-414a-b57d-f4b0ea5fc470`: a carta do cadeado tem quatro bolinhas separadas. A folha de peças ainda guarda o corte em zero. Fora do commit: QualitySettings, `ref-colecao-temp.png`, `_ref`, `_tmp_hud`, `_tmp_creatures`, `_tmp_trail`. POK-25 é do Logan e POK-55 é do Dennis.
+- 30 set, noite: Raphael confirmou no Play a língua, o cristal e o fator no dano. POK-82, POK-83 e POK-84 estão Done. O saldo 38 é o ouro antigo; 94 de dano no cristal credita 0. A cena do cristal passou a usar os modelos da Lutar.
 
 - Escritório Raphael: `S:\escritorio-raphael`. Unity clonado **ao lado**: `S:\unity` ← `https://github.com/game-pkld/unity.git`. Editor **6000.3.23f1** instalado em `C:\Program Files\Unity\Hub\Editor\6000.3.23f1`. Hub também tem **6.6.2** — não abrir o projeto nisso. Abrir **só** `S:\unity` — nunca a pasta `Assets\Game\Arena3v3\Resources` (o Hub trata isso como projeto vazio Untitled).
 - GitHub org: Raphael **vê** [`docs`](https://github.com/game-pkld/docs) e [`unity`](https://github.com/game-pkld/unity) privados (screenshot 20 set). Escritório: `https://github.com/xboxbr/escritorio-raphael.git`, `main` no remote. Repo do escritório ainda **público** — virar Private. Sem `gh`. Sem senha no chat.

@@ -12,6 +12,12 @@
       "env": {
         "MESHY_API_KEY": "${env:MESHY_API_KEY}"
       }
+    },
+    "spritecook": {
+      "url": "https://api.spritecook.ai/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${env:AI_SPRITECOOK_GAME}"
+      }
     }
   }
 }
