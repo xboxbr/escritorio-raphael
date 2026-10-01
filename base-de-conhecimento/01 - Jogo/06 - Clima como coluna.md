@@ -32,9 +32,13 @@ Temos elementos. O clima do mundo — chuva, tempestade, seca, temporada — con
 - Primeira luta: um clima no campo **não** é o primeiro commit — Raphael: instância de luta primeiro. Clima entra como tema desde o começo no design, não no cubo.
 - Luan: fichas, tema, narrativa; Raphael: o Play que mostra luta, depois um clima visível.
 
-## Ainda não
+## Tipos
 
-Quantos tipos, chart de vantagem, lista de climas. Kickoff confirmou a coluna, **não** o conjunto curto. Chart vem depois.
+> [!info] Halan, 30 set, POK-82. Dezenove tipos. A chave é o inglês. O rótulo segue a língua da tela.
+
+A grade mora num lugar só. Linha é o ataque, coluna é a defesa. Sem elemento, o fator é 1. Dois elementos: o produto, sem teto. Luz é 2 em Fantasma e Sombrio, 0.5 em Terra. Contra Luz: 2 de Inseto, Fantasma e Sombrio.
+
+Lista de climas de campo (chuva, seca) continua aberta. O par do dia do cristal é outra escala: o calendário do servidor, semana começando na segunda.
 
 ## Notas relacionadas
 

@@ -32,6 +32,12 @@ O que vale **agora**. Sem histórico de norte antigo.
 - Bootstrap: Halan custeia assinaturas e Raphael. Código: Raphael + Halan suporte + Douglas. **Sem investidor.** Independente.
 - Arte do slice: 3D. Meshy Free ok pra placeholder interno (CC BY 4.0). Higgsfield = conceito/imagem/vídeo e GLB de previz — **não** é o motor do jogo.
 
+## Tipos, cristal e língua (Halan, 30 set)
+
+- Dezenove tipos. Chave em inglês, rótulo na língua da tela. A grade mora num lugar só. Sem elemento, fator 1. Dois elementos, o produto, sem teto.
+- Cristal: cinco marcas, não age, não morre. Velocidade copiada de um dos três, pela seed. Ouro pelos marcos a partir de 10.000. O dia é o relógio do servidor. Semana começa na segunda. O cliente não manda o dia.
+- Línguas: `pt-BR`, `en-US`, `es-ES`. Frase por chave em inglês. Fora das três, `pt-BR`. Tradução faltando cai em `en-US`. Schema em inglês (`locale`).
+
 ## Notas relacionadas
 
 - [[00 - Overview]] · [[03 - Plano de execução]] · [[04 - Recortes de inspiração]] · [[06 - Clima como coluna]] · [[07 - Kickoff 19 set]]

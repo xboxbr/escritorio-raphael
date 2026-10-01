@@ -10,6 +10,8 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 30 set, noite: Raphael confirmou no Play a língua, o cristal e o fator no dano. POK-82, POK-83 e POK-84 estão Done. O saldo 38 é o ouro antigo; 94 de dano no cristal credita 0. Código no GitHub do jogo: `44f015e` em `https://github.com/game-pkld/unity.git` (`main`). A cena do cristal ainda ia para os modelos que a Lutar já usa, depois desse save.
+
 - Escritório Raphael: `S:\escritorio-raphael`. Unity clonado **ao lado**: `S:\unity` ← `https://github.com/game-pkld/unity.git`. Editor **6000.3.23f1** instalado em `C:\Program Files\Unity\Hub\Editor\6000.3.23f1`. Hub também tem **6.6.2** — não abrir o projeto nisso. Abrir **só** `S:\unity` — nunca a pasta `Assets\Game\Arena3v3\Resources` (o Hub trata isso como projeto vazio Untitled).
 - GitHub org: Raphael **vê** [`docs`](https://github.com/game-pkld/docs) e [`unity`](https://github.com/game-pkld/unity) privados (screenshot 20 set). Escritório: `https://github.com/xboxbr/escritorio-raphael.git`, `main` no remote. Repo do escritório ainda **público** — virar Private. Sem `gh`. Sem senha no chat.
 - Kickoff 19 set rolou (duas horas, dois Meets). Time: Raphael no **Cursor**; Luan feeling/história; Halan suporte + paga (R$ 250/semana de partida + ferramentas).
