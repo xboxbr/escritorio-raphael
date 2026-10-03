@@ -35,6 +35,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 ## Movimento e time (Raphael, 2 out)
 
 - Esqueleto: Tripo, modo humanoide, inclusive nos quadrúpedes. Movimento no jogo: `BoneMotion` (respirar parado, andar na trilha, investida de ataque).
+- Eco (Bicho 06) usa o FBX da planta (`a26665b4`): clipe `walk` na trilha, chute `front_kick_02` em todo ataque. A espera é balanço no código. Estatura 1,716, rosto para a frente da luta. Pingo (Bicho 09) é o lagarto de lava (`8e779854`), de quatro, estatura 1,5. Escama soca em todo ataque. Musgo estatura 1,305. Galho voltou ao mesh antigo.
 - Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
 - O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
