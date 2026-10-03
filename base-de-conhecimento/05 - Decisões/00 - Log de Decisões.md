@@ -1,6 +1,6 @@
 ---
 tags: [decisões]
-data: 2026-09-20
+data: 2026-10-02
 status: revisado
 ---
 
@@ -31,6 +31,17 @@ O que vale **agora**. Sem histórico de norte antigo.
 - Engine: **Unity 6.3 LTS** (`6000.3.23f1`, 8 set). Projeto `client/` (URP). Personal enquanto Total Finances ≤ US$ 200k / 12 meses. 6.6 não é o editor deste projeto.
 - Bootstrap: Halan custeia assinaturas e Raphael. Código: Raphael + Halan suporte + Douglas. **Sem investidor.** Independente.
 - Arte do slice: 3D. Meshy Free ok pra placeholder interno (CC BY 4.0). Higgsfield = conceito/imagem/vídeo e GLB de previz — **não** é o motor do jogo.
+
+## Movimento e time (Raphael, 2 out)
+
+- Esqueleto: Tripo, modo humanoide, inclusive nos quadrúpedes. Movimento no jogo: `BoneMotion` (respirar parado, andar na trilha, investida de ataque).
+- Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
+- O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
+- Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
+
+## HUD da luta (Halan, 1 out)
+
+A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o kit místico, não o print. Velocidade e auto ficam à esquerda. No topo, nome e Power de cada lado. A fila de quem joga fica à direita. A saída fica no canto. As três skills ficam embaixo, no centro; a ultimate acende quando pode ser usada. A vida do bicho fica no pé, com a carga da ultimate numa barra fina embaixo. Ajuda não entra. Suporte, insígnia, campo, fruta e ressonância esperam a mecânica. Escudo não aparece enquanto a luta não tiver esse número. Velocidade continua 1x, 2x e 4x. Nível de conta não entra.
 
 ## Tipos, cristal e língua (Halan, 30 set)
 

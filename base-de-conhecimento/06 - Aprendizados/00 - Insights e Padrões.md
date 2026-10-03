@@ -1,6 +1,6 @@
 ---
 tags: [aprendizados, insights]
-data: 2026-09-23
+data: 2026-10-02
 status: revisado
 ---
 
@@ -43,6 +43,12 @@ Ainda cedo. Grava quando o padrão aparecer ≥ 2 vezes.
 **O que**: A previz lia “Minecraft” por dois motivos juntos: primitivas `Cube` na caverna e anti-aliasing desligado (URP Deferred, MSAA=1, câmera `None`).
 **Por quê**: Filtro (SMAA, bloom, grain) suaviza pixel da borda. Não muda silhueta de parede-caixa. Fotoreal de bicho continua Meshy, não post-process.
 **Como aplicar**: Jagged → SMAA High na câmera (TAA fantasma nos VFX). Quadrado → cilindro/esfera, não cubo. Não vender filtro como arte final.
+
+### Osso de humanoide, movimento no código
+
+**O que**: Remesh da Meshy estragou o UV da Escama. O rig de quadrúpede da Tripo no Farpa saiu torto; o modo humanoide no mesmo corpo serviu. Respirar, andar e atacar são o `BoneMotion`, não um clipe da Meshy.
+**Por quê**: A biblioteca de animação da Meshy não aceitou esses corpos, e o export de esqueleto da Tripo no plano grátis não vinha. O FBX humanoide entrou, e o código escolhe o eixo e deita o ciclo.
+**Como aplicar**: Não remeshar modelo que já tem textura boa. Quadrúpede estranho → rig humanoide na Tripo + `BoneMotion`. Ver [[00 - Rig automático]].
 
 ### Canto do mapa ≠ canto da câmera
 

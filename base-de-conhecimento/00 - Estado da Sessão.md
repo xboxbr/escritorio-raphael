@@ -1,6 +1,6 @@
 ---
 tags: [handoff, estado, operacional]
-data: 2026-10-01
+data: 2026-10-02
 status: revisado
 ---
 
@@ -10,6 +10,9 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 2 out, noite: [POK-93](https://linear.app/pokeland-vibes/issue/POK-93/bichos-osso-da-tripo-respirar-andar-e-atacar) Done. Osso da Tripo no modo humanoide, movimento no `BoneMotion` (respirar, andar na trilha, investida). Bicho 07 continua com o nome Limo; o mesh é o FBX novo. Time de três grava em `PlayerPrefs` e entra na luta 3v3. Aventura tem sombra no chão e zoom da roda. Código no GitHub do jogo: `72cf18d` em `https://github.com/game-pkld/unity.git` (`main`). Fora do commit: `QualitySettings`, `ref-colecao-temp.png`, `_ref`, `_tmp_hud`, `_tmp_creatures`, `_tmp_trail`, `Assets/_Recovery`.
+- 1 out, fim da tarde: a tela do Play é celular deitado, 16:9 (1920×1080). 9:16 seria o telefone em pé. O HUD da luta mede nessa proporção.
+- 1 out, tarde: Raphael disse que o Halan vai assinar um plano do SpriteCook para ter mais créditos. José não assina. Enquanto o saldo novo não aparecer, o kit fica parado. A luta 3v3 passa a usar a distribuição do print que o Halan mandou, no estilo do kit. Sem suporte, insígnia, campo, fruta, ressonância, escudo nem nível de conta. Cinco molduras que o Raphael marcou na folha estão em `S:\unity\Assets\Game\Ui\Hud\`, com o miolo transparente. Ainda não entram na luta.
 - 1 out: a fila do Raphael no Linear está vazia. POK-85 a POK-90 estão Done. A ficha tem chance de acerto, cinco skills e os quatro números fora do hexágono. O Power usa os pesos novos. A conta do golpe está em StrikeMath; o número que sobe na arena ainda é o dano escrito da skill. Código no GitHub do jogo: `a845420` em `https://github.com/game-pkld/unity.git` (`main`). O HUD místico está no SpriteCook, conceito `ded8e80d-6358-414a-b57d-f4b0ea5fc470`: a carta do cadeado tem quatro bolinhas separadas. A folha de peças ainda guarda o corte em zero. Fora do commit: QualitySettings, `ref-colecao-temp.png`, `_ref`, `_tmp_hud`, `_tmp_creatures`, `_tmp_trail`. POK-25 é do Logan e POK-55 é do Dennis.
 - 30 set, noite: Raphael confirmou no Play a língua, o cristal e o fator no dano. POK-82, POK-83 e POK-84 estão Done. O saldo 38 é o ouro antigo; 94 de dano no cristal credita 0. A cena do cristal passou a usar os modelos da Lutar.
 

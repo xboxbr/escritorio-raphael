@@ -24,6 +24,15 @@ Quem gera o mesh e já devolve esqueleto, e quanto custa o plano de entrada. Con
 
 > [!warning] Rodin (Hyper3D) aparece em páginas da Meshy e da Tripo como mesh sem esqueleto, Creator a US$ 30/mês. A página de preço da Hyper3D não abriu daqui. Não tratar como fato da fonte deles.
 
+## Play, 2 out
+
+> [!info] Raphael rigou na Tripo e o movimento entrou no Unity. Carnivora, Furia, Musgo, Nuvem, Escama, Farpa e o Bicho 07 (nome na ficha: Limo).
+
+- Remesh da Meshy estragou o UV da Escama. O FBX com a textura original ficou.
+- Rig de quadrúpede no Farpa saiu com osso solto embaixo da barriga. O mesmo corpo no modo humanoide ficou usável. Os outros quadrúpedes seguiram esse modo.
+- No plano grátis a Tripo rigou, e o export do esqueleto pediu plano pago. O que entrou no jogo foi o FBX que o Raphael baixou depois.
+- O clipe não veio da Meshy. `BoneMotion` respira, anda e investe, e deita o ciclo do esqueleto humanoide no chão. O eixo de cada osso é escolhido no código: a perna da Escama ia para o lado.
+
 ## O que isso muda aqui
 
 Carnivora e Furia não são humanoide. Mixamo e AccuRIG não resolvem. O caminho barato é rigar na Meshy que já está paga, e só olhar a Tripo se o rig da Meshy quebrar nesses dois corpos. Um teste de terceiro (maio 2026) preferiu o osso da Tripo em bicho não humano; outro levantamento de volume de jogo achou a Meshy um pouco mais pronta para entrar no motor. Não é vitória clara.
