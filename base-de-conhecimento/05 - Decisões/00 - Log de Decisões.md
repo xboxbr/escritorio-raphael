@@ -14,7 +14,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 - Casa: **Cursor**, workspace **separado** do Pokeland.
 - Skills em `.claude/`.
 - GitHub: `git`, nunca `gh`. SSH só via `github-personal` (não mexer no perfil PortX). Conta `halannl`. Repo do escritório: [`halannl/game-pkld-vibes`](https://github.com/halannl/game-pkld-vibes). Org: [`docs`](https://github.com/game-pkld/docs) (cérebro) + [`unity`](https://github.com/game-pkld/unity) (código). Escritório Cursor do Raphael: zip, versiona no git pessoal. O `client/` em `e:\dev\game` não é o remote oficial.
-- Linear: workspace [`pokeland-vibes`](https://linear.app/pokeland-vibes), team Pokeland-vibes. MCP `linear-game`, chave `AI_LINEAR_GAME`. Sem Firecrawl/Supabase/Vercel do fangame.
+- Linear: workspace [`pokeland-vibes`](https://linear.app/pokeland-vibes), team Pokeland-vibes. MCP `linear-game`, chave `AI_LINEAR_GAME`. Sem Firecrawl/Supabase/Vercel do fangame. Cada push do jogo no GitHub ganha um issue Done no Linear, no mesmo turno (Raphael, 3 out).
 - Pesquisa: `AI_BRAVE_API_KEY`, `AI_PERPLEXITY_API_KEY` (skill pesquisa-aprofundada). Nunca valores no git.
 - Este vault é o **jogo original**. Fangame (site/canal) = `e:\dev\pokeland`.
 
@@ -35,7 +35,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 ## Movimento e time (Raphael, 2 out)
 
 - Esqueleto: Tripo, modo humanoide, inclusive nos quadrúpedes. Movimento no jogo: `BoneMotion` (respirar parado, andar na trilha, investida de ataque).
-- Eco (Bicho 06) usa o FBX da planta (`a26665b4`): clipe `walk` na trilha, chute `front_kick_02` em todo ataque. A espera é balanço no código. Estatura 1,716, rosto para a frente da luta. Pingo (Bicho 09) é o lagarto de lava (`8e779854`), de quatro, estatura 1,5. Escama soca em todo ataque. Musgo estatura 1,305. Galho voltou ao mesh antigo.
+- Eco (Bicho 06) usa o FBX da planta (`a26665b4`): clipe `walk` na trilha, chute `front_kick_02` em todo ataque. A espera é balanço no código. Estatura 1,544, rosto para a frente da luta. Pingo (Bicho 09) é o lagarto de lava (`8e779854`), de quatro, estatura 1,5. Escama soca para a frente em todo ataque. Musgo estatura 1,305. Galho voltou ao mesh antigo. Na vez de atacar, o corpo não cresce.
 - Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
 - O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.

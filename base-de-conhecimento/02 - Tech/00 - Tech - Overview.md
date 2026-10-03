@@ -17,6 +17,7 @@ Pré-kick-off de código. Linear confirmado. GitHub pessoal + org. Premissa de e
 - Escritório Raphael: `.cursor/mcp.json` interpola `${env:AI_LINEAR_GAME}` no header `Authorization`. Valor só no User env do Windows, nunca no arquivo.
 - Admins vistos em 8 set: `halannl85@gmail.com`, `gotensousa5@gmail.com` (LOGAN).
 - Sem Firecrawl/Supabase/Vercel do Pokeland (fangame).
+- Cada push do jogo (`game-pkld/unity`) ganha um issue Done neste team, no mesmo turno, com o link do commit (Raphael, 3 out).
 
 ## GitHub
 

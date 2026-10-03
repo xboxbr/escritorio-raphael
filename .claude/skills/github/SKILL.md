@@ -12,3 +12,5 @@ Depois da entrevista (`INTRODUCAO.md`). Guia: `DEPOIS.md`.
 - Documentação canônica: `https://github.com/game-pkld/docs.git`
 
 Confirmar dono/repo antes de push. Sem force push em `main`. Não commitar secrets.
+
+Todo push do jogo (`game-pkld/unity`) ganha, no mesmo turno, um issue Done no Linear (team Pokeland-vibes, assignee Raphael), com o link do commit. O escritório (`xboxbr/escritorio-raphael`) sobe junto quando o cérebro mudou.
