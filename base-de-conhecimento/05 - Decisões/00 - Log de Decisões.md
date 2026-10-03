@@ -36,6 +36,8 @@ O que vale **agora**. Sem histórico de norte antigo.
 
 - Esqueleto: Tripo, modo humanoide, inclusive nos quadrúpedes. Movimento no jogo: `BoneMotion` (respirar parado, andar na trilha, investida de ataque).
 - Eco (Bicho 06) usa o FBX da planta (`a26665b4`): clipe `walk` na trilha, chute `front_kick_02` em todo ataque. A espera é balanço no código. Estatura 1,544, rosto para a frente da luta. Pingo (Bicho 09) é o lagarto de lava (`8e779854`), de quatro, estatura 1,5. Escama soca para a frente em todo ataque. Musgo estatura 1,305. Galho voltou ao mesh antigo. Na vez de atacar, o corpo não cresce.
+- Pinça (Bicho 10) usa o FBX do dragão (`cde875a4`), de quatro, estatura 1,72. O nome na ficha continua Pinça. O retrato é o do dragão. O ataque levanta as patas da frente e desce. Código: `479ee70` em `https://github.com/game-pkld/unity.git`.
+- O efeito visual do golpe é do bicho, lido pelo número do retrato: ácido, vento, esporos, terra, gelo, pétalas, vórtice, raízes, lava, sopro de fogo, espinhos, punho elétrico, relâmpago, cristais. Básico é menor, ultimate é maior. O dano entra no instante do impacto. O disparo sai e acerta na altura do peito, medido a partir do chão. Os nomes e os números da ficha não mudaram.
 - Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
 - O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
