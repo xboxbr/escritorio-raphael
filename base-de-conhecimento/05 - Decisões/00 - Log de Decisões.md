@@ -40,7 +40,8 @@ O que vale **agora**. Sem histórico de norte antigo.
 - O efeito visual do golpe é do bicho, lido pelo número do retrato: ácido, vento, esporos, terra, gelo, pétalas, vórtice, raízes, lava, sopro de fogo, espinhos, punho elétrico, relâmpago, cristais. Básico é menor, ultimate é maior. O dano entra no instante do impacto. O disparo sai e acerta na altura do peito, medido a partir do chão. Os nomes e os números da ficha não mudaram.
 - Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
 - O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
-- Lutar abre primeiro a escolha da área. A primeira é a caverna. A segunda é a clareira: céu aberto, grama, o dia da ilha. Sem nome de lugar novo.
+- Lutar abre a escolha da área. As seis: Caverna, Clareira, sol 6.1, Astra 6, Opus 5.5 e Fable 5.1. Opus 5.5 é costa de vento, céu aberto, mar e a luz do fim do dia. Fable 5.1 é campina de tempestade, céu carregado, pedras de runa, relâmpago de vez em quando.
+- A aventura é uma rota 3D contínua: luta, caminhada e paisagem compartilham coordenadas (`AdventureDiorama`). Materiais fotográficos CC0 do ambientCG, com fonte registrada em `Resources/AdventureArt/SOURCES.md`. Texturas ficam em git normal enquanto nenhum arquivo passar de 10 MB; LFS só para arquivos grandes como o `ggml-small.bin`.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
 
 ## HUD da luta (Halan, 1 out)
