@@ -40,6 +40,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 - O efeito visual do golpe é do bicho, lido pelo número do retrato: ácido, vento, esporos, terra, gelo, pétalas, vórtice, raízes, lava, sopro de fogo, espinhos, punho elétrico, relâmpago, cristais. Básico é menor, ultimate é maior. O dano entra no instante do impacto. O disparo sai e acerta na altura do peito, medido a partir do chão. Os nomes e os números da ficha não mudaram.
 - Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
 - O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
+- Lutar abre primeiro a escolha da área. A primeira é a caverna. A segunda é a clareira: céu aberto, grama, o dia da ilha. Sem nome de lugar novo.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
 
 ## HUD da luta (Halan, 1 out)
@@ -48,7 +49,8 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 
 ## Tipos, cristal e língua (Halan, 30 set)
 
-- Dezenove tipos. Chave em inglês, rótulo na língua da tela. A grade mora num lugar só. Sem elemento, fator 1. Dois elementos, o produto, sem teto.
+- Dezenove tipos. Chave em inglês, rótulo na língua da tela. A grade mora num lugar só. Sem elemento, fator 1. Dois elementos, o produto, sem teto. O golpe multiplica essa vantagem no `StrikeMath`. Ataque 0 continua 0.
+- Quem luta é a ficha do bicho. Arena e trilha não resolvem o golpe pelo Azul/Vermelho. Os inimigos da luta são Espinho, Farpa e Escama. O cristal não é bicho: a defesa 24 está no asset `Cristal`. Cada bicho tem um ou dois elementos; cada skill tem um.
 - Cristal: cinco marcas, não age, não morre. Velocidade copiada de um dos três, pela seed. Ouro pelos marcos a partir de 10.000. O dia é o relógio do servidor. Semana começa na segunda. O cliente não manda o dia.
 - Línguas: `pt-BR`, `en-US`, `es-ES`. Frase por chave em inglês. Fora das três, `pt-BR`. Tradução faltando cai em `en-US`. Schema em inglês (`locale`).
 
