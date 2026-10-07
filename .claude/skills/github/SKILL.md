@@ -13,4 +13,6 @@ Depois da entrevista (`INTRODUCAO.md`). Guia: `DEPOIS.md`.
 
 Confirmar dono/repo antes de push. Sem force push em `main`. Não commitar secrets.
 
+Cada trabalho no `game-pkld/unity` nasce numa branch nova. Não commitar direto na `main`. Merge para a `main` quando o trabalho fecha, ou quando o Raphael mandar.
+
 Todo push do jogo (`game-pkld/unity`) ganha, no mesmo turno, um issue Done no Linear (team Pokeland-vibes, assignee Raphael), com o link do commit. O escritório (`xboxbr/escritorio-raphael`) sobe junto quando o cérebro mudou.

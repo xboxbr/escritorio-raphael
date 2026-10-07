@@ -15,6 +15,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 - Skills em `.claude/`.
 - GitHub: `git`, nunca `gh`. SSH só via `github-personal` (não mexer no perfil PortX). Conta `halannl`. Repo do escritório: [`halannl/game-pkld-vibes`](https://github.com/halannl/game-pkld-vibes). Org: [`docs`](https://github.com/game-pkld/docs) (cérebro) + [`unity`](https://github.com/game-pkld/unity) (código). Escritório Cursor do Raphael: zip, versiona no git pessoal. O `client/` em `e:\dev\game` não é o remote oficial.
 - Linear: workspace [`pokeland-vibes`](https://linear.app/pokeland-vibes), team Pokeland-vibes. MCP `linear-game`, chave `AI_LINEAR_GAME`. Sem Firecrawl/Supabase/Vercel do fangame. Cada push do jogo no GitHub ganha um issue Done no Linear, no mesmo turno (Raphael, 3 out).
+- Git do jogo (`game-pkld/unity`): cada trabalho nasce numa branch. Não se commita direto na `main`. O merge para a `main` acontece quando o trabalho fecha, ou quando o Raphael manda. Sem force push na `main` (Halan, 6 out).
 - Pesquisa: `AI_BRAVE_API_KEY`, `AI_PERPLEXITY_API_KEY` (skill pesquisa-aprofundada). Nunca valores no git.
 - Este vault é o **jogo original**. Fangame (site/canal) = `e:\dev\pokeland`.
 
@@ -40,7 +41,8 @@ O que vale **agora**. Sem histórico de norte antigo.
 - O efeito visual do golpe é do bicho, lido pelo número do retrato: ácido, vento, esporos, terra, gelo, pétalas, vórtice, raízes, lava, sopro de fogo, espinhos, punho elétrico, relâmpago, cristais. Básico é menor, ultimate é maior. O dano entra no instante do impacto. O disparo sai e acerta na altura do peito, medido a partir do chão. Os nomes e os números da ficha não mudaram.
 - Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
 - O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
-- Lutar abre a escolha da área. As seis: Caverna, Clareira, sol 6.1, Astra 6, Opus 5.5 e Fable 5.1. Opus 5.5 é costa de vento, céu aberto, mar e a luz do fim do dia. Fable 5.1 é campina de tempestade, céu carregado, pedras de runa, relâmpago de vez em quando.
+- Lutar abre a escolha da área. As seis: Caverna, Clareira, Santuário, Observatório, Costa e Campina. Santuário é o solar suspenso. Observatório é o do crepúsculo. Costa é a de vento, céu aberto, mar e a luz do fim do dia. Campina é a de tempestade, céu carregado, pedras de runa, relâmpago de vez em quando. Esses quatro nasceram com o nome do modelo que os fez (sol 6.1, Astra 6, Opus 5.5, Fable 5.1) para o Raphael comparar a criação 3D. O nome no jogo passou a ser o do lugar. O commit `04b8dcf` guarda o nome antigo.
+- A prova de cenário do Halan (POK-98) é uma cena nova por modelo, fora do seletor da Lutar e fora do Play. Cada porção nasce num agente novo, e a seguinte só abre depois que a câmera de batalha foi olhada. 5 out, noite: o Halan não gostou do mapa. As cenas do Grok 4.7 e do Sol 5.6 foram apagadas. POK-99 e POK-100 canceladas. A POK-101 não começou.
 - A aventura é uma rota 3D contínua: luta, caminhada e paisagem compartilham coordenadas (`AdventureDiorama`). Materiais fotográficos CC0 do ambientCG, com fonte registrada em `Resources/AdventureArt/SOURCES.md`. Texturas ficam em git normal enquanto nenhum arquivo passar de 10 MB; LFS só para arquivos grandes como o `ggml-small.bin`.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
 

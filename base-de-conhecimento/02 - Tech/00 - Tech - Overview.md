@@ -18,6 +18,7 @@ Pré-kick-off de código. Linear confirmado. GitHub pessoal + org. Premissa de e
 - Admins vistos em 8 set: `halannl85@gmail.com`, `gotensousa5@gmail.com` (LOGAN).
 - Sem Firecrawl/Supabase/Vercel do Pokeland (fangame).
 - Cada push do jogo (`game-pkld/unity`) ganha um issue Done neste team, no mesmo turno, com o link do commit (Raphael, 3 out).
+- Cada trabalho no `unity` nasce numa branch. O merge para a `main` só quando o trabalho fecha, ou quando o Raphael manda. Sem force push na `main` (Halan, 6 out).
 
 ## GitHub
 
