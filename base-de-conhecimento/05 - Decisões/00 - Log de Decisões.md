@@ -46,6 +46,10 @@ O que vale **agora**. Sem histórico de norte antigo.
 - A aventura é uma rota 3D contínua: luta, caminhada e paisagem compartilham coordenadas (`AdventureDiorama`). Materiais fotográficos CC0 do ambientCG, com fonte registrada em `Resources/AdventureArt/SOURCES.md`. Texturas ficam em git normal enquanto nenhum arquivo passar de 10 MB; LFS só para arquivos grandes como o `ggml-small.bin`.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
 
+## Retratos (Raphael, 7 out)
+
+Foto nova de bicho: diagonal, olhando para a frente, cabeça à esquerda. Um arquivo só, `Portraits/bicho-XX`, entra na fila da batalha, na seleção de time e no menu de bichos. As fotos atuais ficam. Esses bichos serão substituídos.
+
 ## HUD da luta (Halan, 1 out)
 
 A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o kit místico, não o print. Velocidade e auto ficam à esquerda. No topo, nome e Power de cada lado. A fila de quem joga fica à direita. A saída fica no canto. As três skills ficam embaixo, no centro; a ultimate acende quando pode ser usada. A vida do bicho fica no pé, com a carga da ultimate numa barra fina embaixo. Ajuda não entra. Suporte, insígnia, campo, fruta e ressonância esperam a mecânica. Escudo não aparece enquanto a luta não tiver esse número. Velocidade continua 1x, 2x e 4x. Nível de conta não entra.
