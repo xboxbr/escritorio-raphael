@@ -1,6 +1,6 @@
 ---
 tags: [decisões]
-data: 2026-10-02
+data: 2026-10-10
 status: revisado
 ---
 
@@ -35,20 +35,19 @@ O que vale **agora**. Sem histórico de norte antigo.
 
 ## Movimento e time (Raphael, 2 out)
 
-- Esqueleto: Tripo, modo humanoide, inclusive nos quadrúpedes. Movimento no jogo: `BoneMotion` (respirar parado, andar na trilha, investida de ataque).
-- Eco (Bicho 06) usa o FBX da planta (`a26665b4`): clipe `walk` na trilha, chute `front_kick_02` em todo ataque. A espera é balanço no código. Estatura 1,544, rosto para a frente da luta. Pingo (Bicho 09) é o lagarto de lava (`8e779854`), de quatro, estatura 1,5. Escama soca para a frente em todo ataque. Musgo estatura 1,305. Galho voltou ao mesh antigo. Na vez de atacar, o corpo não cresce.
-- Pinça (Bicho 10) usa o FBX do dragão (`cde875a4`), de quatro, estatura 1,72. O nome na ficha continua Pinça. O retrato é o do dragão. O ataque levanta as patas da frente e desce. Código: `479ee70` em `https://github.com/game-pkld/unity.git`.
-- O efeito visual do golpe é do bicho, lido pelo número do retrato: ácido, vento, esporos, terra, gelo, pétalas, vórtice, raízes, lava, sopro de fogo, espinhos, punho elétrico, relâmpago, cristais. Básico é menor, ultimate é maior. O dano entra no instante do impacto. O disparo sai e acerta na altura do peito, medido a partir do chão. Os nomes e os números da ficha não mudaram.
-- Bicho 07 continua com o nome Limo. O mesh é o FBX novo da Tripo. Retrato com fundo transparente e arco verde.
+- Movimento no jogo: `BoneMotion` (respirar parado, andar na trilha, investida de ataque). Quem entra nesse movimento é o elenco de 10 out.
 - O time de três grava em `PlayerPrefs` (`team.slots`). A luta 3v3 abre com essa escolha.
 - Lutar abre a escolha da área. As seis: Caverna, Clareira, Santuário, Observatório, Costa e Campina. Santuário é o solar suspenso. Observatório é o do crepúsculo. Costa é a de vento, céu aberto, mar e a luz do fim do dia. Campina é a de tempestade, céu carregado, pedras de runa, relâmpago de vez em quando. Esses quatro nasceram com o nome do modelo que os fez (sol 6.1, Astra 6, Opus 5.5, Fable 5.1) para o Raphael comparar a criação 3D. O nome no jogo passou a ser o do lugar. O commit `04b8dcf` guarda o nome antigo.
-- A prova de cenário do Halan (POK-98) é uma cena nova por modelo, fora do seletor da Lutar e fora do Play. Cada porção nasce num agente novo, e a seguinte só abre depois que a câmera de batalha foi olhada. 5 out, noite: o Halan não gostou do mapa. As cenas do Grok 4.7 e do Sol 5.6 foram apagadas. POK-99 e POK-100 canceladas. A POK-101 não começou.
 - A aventura é uma rota 3D contínua: luta, caminhada e paisagem compartilham coordenadas (`AdventureDiorama`). Materiais fotográficos CC0 do ambientCG, com fonte registrada em `Resources/AdventureArt/SOURCES.md`. Texturas ficam em git normal enquanto nenhum arquivo passar de 10 MB; LFS só para arquivos grandes como o `ggml-small.bin`.
 - Aventura: sombra oval no chão e zoom da roda do mouse, o mesmo gesto da arena.
 
+## Elenco (Halan, 10 out)
+
+Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, ficha, luta e inimigo. Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. O corpo de cada um é a imagem anexada no filho. Não redesenhar. Mesh na Meshy até acabar o crédito; sem crédito, Tripo. Esqueleto na Nira. Movimentos: idle, cheer-up, dying, walking/moving, e um golpe padrão. Status, skills e efeitos de skill ficam dummy. Fila: [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo), filhos POK-112 a POK-124, assignee Raphael, Todo.
+
 ## Retratos (Raphael, 7 out)
 
-Foto nova de bicho: diagonal, olhando para a frente, cabeça à esquerda. Um arquivo só, `Portraits/bicho-XX`, entra na fila da batalha, na seleção de time e no menu de bichos. As fotos atuais ficam. Esses bichos serão substituídos.
+Foto de bicho na interface: diagonal, olhando para a frente, cabeça à esquerda. Um arquivo só, `Portraits/bicho-XX`, entra na fila da batalha, na seleção de time e no menu de bichos. O corpo 3D não sai dessa foto: sai da imagem anexada no filho do POK-111.
 
 ## HUD da luta (Halan, 1 out)
 
@@ -57,7 +56,7 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 ## Tipos, cristal e língua (Halan, 30 set)
 
 - Dezenove tipos. Chave em inglês, rótulo na língua da tela. A grade mora num lugar só. Sem elemento, fator 1. Dois elementos, o produto, sem teto. O golpe multiplica essa vantagem no `StrikeMath`. Ataque 0 continua 0.
-- Quem luta é a ficha do bicho. Arena e trilha não resolvem o golpe pelo Azul/Vermelho. Os inimigos da luta são Espinho, Farpa e Escama. O cristal não é bicho: a defesa 24 está no asset `Cristal`. Cada bicho tem um ou dois elementos; cada skill tem um.
+- Quem luta é a ficha do bicho. Arena e trilha não resolvem o golpe pelo Azul/Vermelho. Inimigo e jogador saem do elenco de 13. O cristal não é bicho: a defesa 24 está no asset `Cristal`. Cada bicho tem um ou dois elementos; cada skill tem um.
 - Cristal: cinco marcas, não age, não morre. Velocidade copiada de um dos três, pela seed. Ouro pelos marcos a partir de 10.000. O dia é o relógio do servidor. Semana começa na segunda. O cliente não manda o dia.
 - Línguas: `pt-BR`, `en-US`, `es-ES`. Frase por chave em inglês. Fora das três, `pt-BR`. Tradução faltando cai em `en-US`. Schema em inglês (`locale`).
 

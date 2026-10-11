@@ -50,6 +50,12 @@ Ainda cedo. Grava quando o padrão aparecer ≥ 2 vezes.
 **Por quê**: A biblioteca de animação da Meshy não aceitou esses corpos, e o export de esqueleto da Tripo no plano grátis não vinha. O FBX humanoide entrou, e o código escolhe o eixo e deita o ciclo.
 **Como aplicar**: Não remeshar modelo que já tem textura boa. Quadrúpede estranho → rig humanoide na Tripo + `BoneMotion`. Ver [[00 - Rig automático]].
 
+### Malha do bicho nasce em 10 mil triângulos
+
+**O que**: A Meshy em qualidade alta, levada à Tripo, volta com pedido de recriar a malha.
+**Por quê**: A retopologia da Tripo existe para essa malha densa e mira no máximo 20.000 triângulos. Remesh depois da textura já estragou UV.
+**Como aplicar**: Gerar o bicho já em torno de 10.000 triângulos (faixa 8.000–15.000) e mandar essa malha para a Nira. Não subir a malha de qualidade alta.
+
 ### Canto do mapa ≠ canto da câmera
 
 **O que**: Colunas de tijolo no canto geométrico da sala (`z ≈ -7.5`, boca da caverna) não apareceram no Play.

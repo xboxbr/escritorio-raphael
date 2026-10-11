@@ -1,6 +1,6 @@
 ---
 tags: [handoff, estado, operacional]
-data: 2026-10-02
+data: 2026-10-10
 status: revisado
 ---
 
@@ -10,6 +10,8 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 10 out, fim de tarde: os 13 estão na branch `elenco-13` de `S:\unity`, ainda sem commit. Mesh Meshy T2, alvo 10.000 triângulos, textura 2K, pose T. Arquivos em `Assets/Game/Bichos/Resources/Escolhidos/`. Nomes na ficha: Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. Farpa (Bicho 14) saiu da coleção. Sem esqueleto: o Raphael cria na Nira e troca o FBX no mesmo caminho. Contagem medida: 10.021 a 10.997 triângulos.
+- 10 out, tarde: o Halan abriu [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo) e os filhos POK-112 a POK-124. Assignee Raphael, Todo. Os 13 de `ativos/bichos/escolhidos` substituem o elenco. Nada disso entrou no código ainda. POK-98 a POK-101 continuam no Linear; Raphael mandou ignorar.
 - 7 out: [POK-104](https://linear.app/pokeland-vibes/issue/POK-104/a-entrada-troca-a-foto-pela-ilha-3d-e-a-batalha-no-canto-abre-o-3v3-e) Done. A entrada troca a foto pela ilha 3D. A placa Batalha, no canto, abre o 3v3 e a Aventura. Código no GitHub do jogo: `c52365f` em `https://github.com/game-pkld/unity.git` (`hub-ilha-3d`). Fora do commit: QualitySettings, VersionControlSettings, ref-colecao-temp.png, `_ref`, `_tmp_hud`, `_tmp_creatures`, `_tmp_trail`, `Assets/_Recovery`. A `main` não recebeu este commit.
 - 6 out, noite: o Halan mandou o José trabalhar sempre numa branch. A `main` só recebe merge quando o trabalho fecha, ou quando o Raphael manda. Sem force push na `main`. O código do jogo já está na `main`, commit `eebeb3e`.
 - 6 out: o céu da área Rift no modo Lutar deixou de ser roxo chapado. `RiftSky.shader` mantém somente profundidade roxa obscura, névoa astral discreta e estrelas cintilantes. As tentativas de nebulosa em forma de olho e de galáxia espiral foram removidas por pedido do Raphael. `RiftArena` instala esse skybox só durante o Rift e restaura o céu anterior ao sair. Unity importou o shader e recompilou sem erro novo. Sem commit.
