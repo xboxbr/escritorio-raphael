@@ -1,6 +1,6 @@
 ---
 tags: [decisões]
-data: 2026-10-10
+data: 2026-10-12
 status: revisado
 ---
 
@@ -43,7 +43,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 
 ## Elenco (Halan, 10 out)
 
-Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, ficha, luta e inimigo. Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. O corpo de cada um é a imagem anexada no filho. Não redesenhar. Mesh na Meshy até acabar o crédito; sem crédito, Tripo. Esqueleto na Nira. Movimentos: idle, cheer-up, dying, walking/moving, e um golpe padrão. Status, skills e efeitos de skill ficam dummy. Fila: [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo), filhos POK-112 a POK-124, assignee Raphael, Todo.
+Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, ficha, luta e inimigo. Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. O corpo de cada um é a imagem anexada no filho. Não redesenhar. Mesh na Meshy até acabar o crédito; sem crédito, Tripo. Esqueleto na Nira. Movimentos: idle, cheer-up, dying, walking/moving, e um golpe padrão. Status, skills e efeitos ficam dummy nos outros doze. O Cinderplate usa a carta. Fila: [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo), filhos POK-112 a POK-124, assignee Raphael, Todo.
 
 ## Retratos (Raphael, 7 out)
 
@@ -59,6 +59,17 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 - Quem luta é a ficha do bicho. Arena e trilha não resolvem o golpe pelo Azul/Vermelho. Inimigo e jogador saem do elenco de 13. O cristal não é bicho: a defesa 24 está no asset `Cristal`. Cada bicho tem um ou dois elementos; cada skill tem um.
 - Cristal: cinco marcas, não age, não morre. Velocidade copiada de um dos três, pela seed. Ouro pelos marcos a partir de 10.000. O dia é o relógio do servidor. Semana começa na segunda. O cliente não manda o dia.
 - Línguas: `pt-BR`, `en-US`, `es-ES`. Frase por chave em inglês. Fora das três, `pt-BR`. Tradução faltando cai em `en-US`. Schema em inglês (`locale`).
+
+## Cinderplate (Raphael, 12 out)
+
+- Elementos Ground e Rock.
+- Slots na ordem da carta: Jogo Sujo é o básico (CD 2), Poder Terrestre é a skill (CD 2), Terremoto é o estouro, Ira da Terra é a ultimate.
+- Escavado: nada o alcança, nem área, até o turno seguinte dele. Só a Ira da Terra de outro bicho o tira.
+- Resistência +10% por 10 turnos ([POK-129](https://linear.app/pokeland-vibes/issue/POK-129)) é um corte de dano escondido. Entra na última camada, depois do escudo, antes do único arredondamento. Não aparece na ficha nem no número flutuante. A limpeza da Ira da Terra tira esse corte.
+- Chance de acerto ficou 85/70/90/80. A tarefa do Halan sobre isso continua aberta.
+- A passiva da carta não tem nome. No jogo o nome é Passiva. Sobe a defesa e entra no Power.
+- A defesa enrolada usa a malha da Meshy `cinderplate-bola`, girando para a frente no próprio centro. O arquivo passa de 10 MB e vai em LFS.
+- Na ficha, clicar no nome da skill mostra o golpe no modelo. O boneco fica na frente do bicho, inteiro no quadro. Debaixo do chão o corpo some e só a poeira segue até o impacto.
 
 ## Notas relacionadas
 
