@@ -56,6 +56,12 @@ Ainda cedo. Grava quando o padrão aparecer ≥ 2 vezes.
 **Por quê**: A retopologia da Tripo existe para essa malha densa e mira no máximo 20.000 triângulos. Remesh depois da textura já estragou UV.
 **Como aplicar**: Gerar o bicho já em torno de 10.000 triângulos (faixa 8.000–15.000) e mandar essa malha para a Nira. Não subir a malha de qualidade alta.
 
+### O nome do osso da Nira não é a perna
+
+**O que**: No Frostfang e no Lithon, `thigh_r` é o rabo (no eixo do corpo, apontando para trás) e a perna direita veio como `bone_N`, espelhando a `thigh_l`. No Warphant as patas traseiras inteiras saíram sem nome, atrás do `pelvis`. Eclipse, Shadowmane, Ruffletail e Cinderplate não têm nome de membro.
+**Por quê**: A Nira nomeia o que reconhece e numera o resto. Um movimento que só procura `thigh_l` e `thigh_r` anima o rabo e deixa a perna parada.
+**Como aplicar**: Perna é o par de cadeias que se espelham e chegam ao chão. Rabo é a cadeia longa do `pelvis` que não é coluna nem perna. Asa é o par espelhado que termina no alto do corpo. Não confiar no nome sozinho. Ver [[00 - Rig automático]].
+
 ### Canto do mapa ≠ canto da câmera
 
 **O que**: Colunas de tijolo no canto geométrico da sala (`z ≈ -7.5`, boca da caverna) não apareceram no Play.
