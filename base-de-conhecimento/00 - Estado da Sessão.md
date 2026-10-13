@@ -10,7 +10,7 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
-- 13 out, tarde: cada estrutura da ilha tem um volume sólido. O passeio não entra nesse volume. Ainda sem commit. Raphael ainda não confirmou no Play.
+- 13 out, tarde: cada estrutura da ilha tem um volume sólido. O passeio não entra nesse volume. Código no GitHub do jogo: `cd6a9bc` em `https://github.com/game-pkld/unity.git` (`main`). [POK-134](https://linear.app/pokeland-vibes/issue/POK-134/estruturas-da-ilha-bloqueiam-o-passeio) Done. Raphael ainda não confirmou no Play.
 - 13 out, tarde: no menu principal, os bichos da ilha ficam com o dobro da altura (1,64 × estatura) e só andam no chão livre, a 1,6 m da arquibancada e da escada. Ainda sem commit. Raphael ainda não confirmou no Play.
 - 13 out, tarde: na branch `time-escala-bichos` de `S:\unity`, a tela de time reduz Hellflame 10%, Blossom Queen 15%, Ruffletail 20% e Vaelith 21,25%, e aumenta Cinderplate 10%, Aurion 49,5%, Noct 20%, Shadowmane 10%, Warphant 30%, Frostfang 10% e Lithon 15%. O Eclipse fica 36,125% acima do encaixe, 10% maior do que o tamanho anterior, recua 22 cm no disco, e dobra as asas 32° no idle. Grizzleback fica 5% menor. Luta, ficha e hub não mudam. Ainda sem commit. Raphael ainda não confirmou no Game view.
 - 13 out, tarde: a `main` de `S:\unity` (`https://github.com/game-pkld/unity.git`) está em `5154eda`. A tela de time ganhou quatro times, plataformas com luz e a lista sempre aberta. O escritório (`xboxbr/escritorio-raphael`) já estava em `bb133f8`. Fora do commit: fichas dos bichos, `Packages/manifest.json`, `URPProjectSettings` e `QualitySettings`.
