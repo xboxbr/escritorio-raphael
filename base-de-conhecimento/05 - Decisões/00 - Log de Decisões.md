@@ -71,6 +71,9 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 - A defesa enrolada usa a malha `cinderplate-roda`. Girando, 65% fica dentro do solo e 35% fica para fora.
 - Na ficha, clicar no nome da skill mostra o golpe no modelo. O boneco fica na frente do bicho, inteiro no quadro. Debaixo do chão o corpo some e só a poeira segue até o impacto.
 - Hellflame na luta fica 25% maior. Ficha e hub não mudam.
+- Na tela de time, o corpo atual fica assim: Hellflame 10% menor, Blossom Queen 15% menor, Cinderplate 10% maior, Aurion 49,5% maior (15% maior do que o teste de 30%), Noct 20% maior, Shadowmane 10% maior, Ruffletail 20% menor, Vaelith 21,25% menor (5% maior do que o teste de 25% menor), Warphant 30% maior, Eclipse 36,125% maior que o encaixe (10% maior do que o tamanho anterior) e 22 cm para o fundo do disco, com as asas dobradas 32° no idle da tela de time, Grizzleback 5% menor, Frostfang 10% maior, Lithon 15% maior. Luta, ficha e hub não mudam.
+- Na ilha, o santuário abre Bichos, a lanterna abre Time, o obelisco abre Evoluir e o portal abre Cristal. Itens continua no ponto antigo da foto.
+- No menu principal, os bichos da ilha têm o dobro da altura de antes. Andam só no chão livre, afastados 1,6 m da arquibancada e da escada.
 - Na vez do jogador, a skill de um alvo pode ser marcada antes do clique no inimigo, ou o alvo vem primeiro. Skill de área dispara nos três sem um alvo só. Segurar o bicho por mais de 1 segundo mostra os status da luta, com o valor de agora, no painel do log.
 
 ## Fichas e Hellflame (Raphael, 13 out)
