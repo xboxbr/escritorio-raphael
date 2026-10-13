@@ -1,6 +1,6 @@
 ---
 tags: [decisões]
-data: 2026-10-12
+data: 2026-10-13
 status: revisado
 ---
 
@@ -47,7 +47,7 @@ Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, f
 
 ## Retratos (Raphael, 7 out)
 
-Foto de bicho na interface: diagonal, olhando para a frente, cabeça à esquerda. Um arquivo só, `Portraits/bicho-XX`, entra na fila da batalha, na seleção de time e no menu de bichos. O corpo 3D não sai dessa foto: sai da imagem anexada no filho do POK-111.
+Foto de bicho na interface: diagonal, olhando para a frente, cabeça à esquerda. Na fila da luta o arquivo é JPG com o nome do bicho, em `Portraits/` (`Aurion.jpg`, `Blossom Queen.jpg`). A moldura dourada fica por cima, com o miolo transparente. O corpo 3D não sai dessa foto: sai da imagem anexada no filho do POK-111.
 
 ## HUD da luta (Halan, 1 out)
 
@@ -68,8 +68,10 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 - Resistência +10% por 10 turnos ([POK-129](https://linear.app/pokeland-vibes/issue/POK-129)) é um corte de dano escondido. Entra na última camada, depois do escudo, antes do único arredondamento. Não aparece na ficha nem no número flutuante. A limpeza da Ira da Terra tira esse corte.
 - Chance de acerto ficou 85/70/90/80. A tarefa do Halan sobre isso continua aberta.
 - A passiva da carta não tem nome. No jogo o nome é Passiva. Sobe a defesa e entra no Power.
-- A defesa enrolada usa a malha da Meshy `cinderplate-bola`, girando para a frente no próprio centro. O arquivo passa de 10 MB e vai em LFS.
+- A defesa enrolada usa a malha `cinderplate-roda`. Girando, 65% fica dentro do solo e 35% fica para fora.
 - Na ficha, clicar no nome da skill mostra o golpe no modelo. O boneco fica na frente do bicho, inteiro no quadro. Debaixo do chão o corpo some e só a poeira segue até o impacto.
+- Hellflame na luta fica 25% maior. Ficha e hub não mudam.
+- Na vez do jogador, a skill de um alvo pode ser marcada antes do clique no inimigo, ou o alvo vem primeiro. Skill de área dispara nos três sem um alvo só. Segurar o bicho por mais de 1 segundo mostra os status da luta, com o valor de agora, no painel do log.
 
 ## Notas relacionadas
 
