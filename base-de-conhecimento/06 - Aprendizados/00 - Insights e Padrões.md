@@ -68,6 +68,12 @@ Ainda cedo. Grava quando o padrão aparecer ≥ 2 vezes.
 **Por quê**: Câmera 3/4 em `(5.1, 5.7, -9)` deixa esses cantos fora do frustum; o olho só vê o que a lente enquadra.
 **Como aplicar**: Peça “canto visível” → colocar no frustum (perto das paredes laterais, `z ≈ -1.6`), não no canto do mesh.
 
+### Ícones de habilidade devem preencher o círculo interno
+
+**O que**: Raphael apontou em 13/10/2026 que os ícones do Hellflame ficaram retangulares e pequenos dentro dos botões. A segunda imagem enviada, com Cinderplate, define o encaixe aprovado.
+**Por quê**: Preservar o recorte retangular com margens e apenas arredondar cantos não adapta a arte ao botão circular.
+**Como aplicar**: Usar o Cinderplate como referência de tamanho e enquadramento; preencher o círculo interno com a arte, manter proporções, aplicar máscara circular e transparência fora dela. Não deixar moldura da carta, retângulo ou faixas. Referência salva em `assets/hellflame/referencia-encaixe-cinderplate.png`. Raphael corrigirá os ícones atuais do Hellflame; não alterá-los por conta desta observação. Ver [[00 - Log de Decisões]].
+
 ## Notas relacionadas
 
 - [[00 - Log de Decisões]] · [[00 - Index]]

@@ -1,0 +1,16 @@
+---
+description: Implementar habilidades a partir da ficha de criatura enviada por Raphael
+alwaysApply: true
+---
+
+# Fichas de criaturas
+
+- Quando Raphael enviar a imagem de uma nova criatura para implementar habilidades, executar o pacote completo: passiva, três skills, ultimate, poderes/dano, tipos de golpe, alvos, recargas, condições, durações e limites de acúmulo conforme a ficha.
+- Consultar a implementação anterior e preservar atributos-base que a nova imagem não especificar. Perguntar sobre ambiguidades que mudam a mecânica.
+- Recortar os desenhos de cada habilidade da imagem fornecida e integrá-los aos botões da batalha e à ficha. Não substituir por ícones genéricos ou redesenhar sem solicitação.
+- Encaixe dos ícones: seguir o Cinderplate aprovado. A arte deve preencher o círculo interno, centralizada, com recorte/máscara circular e exterior transparente; sem retângulo visível, cantos, moldura da carta ou faixas de preenchimento. Preservar proporções e ajustar o enquadramento, não encolher o desenho inteiro dentro do círculo. Conferir o arquivo e as dimensões de exibição contra o Cinderplate antes da entrega, sem abrir o Editor. Referência visual em `assets/hellflame/referencia-encaixe-cinderplate.png`.
+- Criar VFX distintos e coerentes com cada desenho e descrição; sincronizar movimento, impacto e aplicação do dano, inclusive em 1x, 2x e 4x. Manter a prévia da ficha consistente com a batalha.
+- Downloads de FX estão autorizados quando necessários para melhorar o resultado; registrar fonte/licença e não comprar sem autorização.
+- Validar código e regras de combate; informar claramente o que depende de teste dentro do jogo.
+- **Não abrir, controlar nem executar o Editor Unity, inclusive em batch. Raphael opera o Unity.** Ao entregar, explicar o serviço feito, pedir que Raphael teste no Unity e confirme se deu certo. Não declarar validação visual/runtime sem confirmação.
+- Hellflame: custo da Investida amaldiçoada é 20% da vida máxima. Se isso o deixaria sem vida, fica com 1. Não morre por esse custo.

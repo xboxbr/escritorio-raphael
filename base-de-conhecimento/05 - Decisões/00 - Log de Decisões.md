@@ -43,7 +43,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 
 ## Elenco (Halan, 10 out)
 
-Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, ficha, luta e inimigo. Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. O corpo de cada um é a imagem anexada no filho. Não redesenhar. Mesh na Meshy até acabar o crédito; sem crédito, Tripo. Esqueleto na Nira. Movimentos: idle, cheer-up, dying, walking/moving, e um golpe padrão. Status, skills e efeitos ficam dummy nos outros doze. O Cinderplate usa a carta. Fila: [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo), filhos POK-112 a POK-124, assignee Raphael, Todo.
+Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, ficha, luta e inimigo. Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. O corpo de cada um é a imagem anexada no filho. Não redesenhar. Mesh na Meshy até acabar o crédito; sem crédito, Tripo. Esqueleto na Nira. Movimentos: idle, cheer-up, dying, walking/moving, e um golpe padrão. Cinderplate e Hellflame têm habilidades implementadas pelas respectivas cartas; os outros onze ainda usam habilidades dummy. Hellflame testado no Unity por Raphael e confirmado como funcionando em 13/10/2026. Fila: [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo), filhos POK-112 a POK-124, assignee Raphael, Todo.
 
 ## Retratos (Raphael, 7 out)
 
@@ -73,6 +73,13 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 - Hellflame na luta fica 25% maior. Ficha e hub não mudam.
 - Na vez do jogador, a skill de um alvo pode ser marcada antes do clique no inimigo, ou o alvo vem primeiro. Skill de área dispara nos três sem um alvo só. Segurar o bicho por mais de 1 segundo mostra os status da luta, com o valor de agora, no painel do log.
 
+## Fichas e Hellflame (Raphael, 13 out)
+
+- Nova imagem de criatura significa implementar passiva, skills, ultimate, dano/poder, efeitos, durações, alvos, recargas e ícones recortados da própria ficha. Preservar atributos não informados. Padrão em `.cursor/rules/fichas-de-criaturas.mdc`.
+- Downloads de FX podem ser usados se necessários, sem compra automática; registrar fonte/licença. Hellflame usa VFX originais do projeto.
+- Hellflame: Força das sombras (Dark, especial 60, único, abate dá +20% velocidade por 2 turnos, máximo 2); Garra das sombras (Ghost, dano zero, roubo de buffs e bloqueio de aumentos por 2 turnos, CD 3); Onda de calor (Fire, especial 20, grupo, +30 pontos de crítico após golpe por 2 turnos sem acumular; os dois braços sobem e o corpo inclina um pouco para a frente); Investida amaldiçoada (Ghost, especial 70, único, custo de 20% da vida máxima, sem matar — fica com 1 se não houver vida bastante —, anticura 3 turnos com transferência no abate, +50% dano contra vida estritamente abaixo de 50%).
+- Passiva: cada inimigo que cruza para 50% de vida ou menos ativa uma vez; +10% Ataque Especial até o fim da batalha, máximo 3 acúmulos.
+- Não abrir, operar ou executar o Editor Unity, inclusive batch. Raphael opera o Editor e confirma o resultado. Toda entrega pede teste no Unity e confirmação. C# compilado sem erros. Raphael confirmou em 13/10/2026 que o teste do Hellflame no Unity deu certo; entrega validada por ele.
 ## Notas relacionadas
 
 - [[00 - Overview]] · [[03 - Plano de execução]] · [[04 - Recortes de inspiração]] · [[06 - Clima como coluna]] · [[07 - Kickoff 19 set]]
