@@ -39,6 +39,8 @@ Pré-kick-off de código. Linear confirmado. GitHub pessoal + org. Premissa de e
 
 **Unity 6.3 LTS** (`6000.3.23f1`). Projeto: `client/` neste workspace, template **Universal 3D** (URP). Sem Unity Cloud. Dossiê: [[00 - Godot vs Unity]]. Licença: [[01 - Unity - Licença e custo]]. 6.6 (update release) **não** é o editor deste projeto.
 
+`ProjectSettings/QualitySettings.asset` tem dois perfis: **Mobile** (índice 0, Android/iPhone) e **PC** (índice 1, Standalone). O Editor no Windows usa PC; o build de celular usa Mobile. O Mobile **não** pode excluir Standalone: o Editor no Windows esconde o nível e, ao salvar, apaga o perfil. Não commitar um QualitySettings que tenha só PC.
+
 Loop 1: Unity Personal, US$ 0, enquanto a receita/funding ligada ao uso da Unity (pessoa física) ou da empresa do jogo (PJ) não passar de US$ 200k nos últimos 12 meses. Sem royalty sobre o jogo.
 
 Não apontar Vercel/Supabase/Firecrawl do **Pokeland** para cá. Qualquer cloud: ainda não.
