@@ -128,3 +128,22 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Substitui a passiva inicial de5%: Dark, +20% de velocidade e +20% de ataque físico durante o combate. Nome traduzido conforme a língua.
 - Somar primeiro os bônus normais de atributos; a passiva multiplica o valor final de entrada por1,20. Exemplo explícito de Raphael: 200+200=400; em batalha, 400×1,20=480. Aplicação permanente e não dissipável, restrita ao combate.
 - Bônus temporário de20% da ultimate tem multiplicador separado: 1,20×1,20=1,44 enquanto ambos estão ativos. Asset, código e textos atualizados; C# compilado sem erros. Teste de gameplay pertence a Raphael.
+
+
+## Shadowmane — efeitos visuais refeitos (Raphael, 14 out)
+
+- Raphael pediu efeitos novos e bonitos para as quatro skills, coerentes com a descrição, usando como sugestão a galeria do Cartoon FX Remaster (Jean Moreno). O pacote é pago e não estava na máquina: nada foi comprado nem baixado. A galeria serviu só de referência de estilo; tudo foi recriado no motor procedural do jogo.
+- Linguagem visual: fumaça cartunesca de tinta, com contorno e sombreamento em dois tons, que se desfaz por erosão em vez de ficar transparente; clarões fortes no impacto; veneno verde-limão com toque violeta (Dark/Poison).
+- Shadow Wave: tinta puxada para as patas, golpe no chão, onda negra que se curva e cobre a linha inimiga inteira; quebra em cada alvo com clarão, estilhaços e um anel fechando sobre a cabeça (atordoamento).
+- Shadow Sting: espinho carregando na cauda, rastro de tinta no avanço, espinho atravessando o alvo pelas costas, cruz de luz e tinta espirrando no rosto (cegueira).
+- Poison Breath: inspira partículas verdes, sopra um cone contínuo de gás e sobe uma nuvem com caveiras tóxicas, bolhas e poça em cada inimigo.
+- Shadow Veil: círculo rúnico no chão, coluna de fumaça e véu se fechando, sumiço no instante do impacto com anéis descendo, olhos de predador piscando e rajadas subindo (+ataque, +velocidade).
+- Código: shader novo `ShadowmaneVfx` (formas Ink, Skull, Spike, Eye, Rune) e `MonsterSpellFx.Shadowmane.cs` reescrito, no ramo `codex/shadowmane-ajustes-halan`, sem commit. C# do jogo compilado com Roslyn sem erros; o shader só compila no Unity. Falta Raphael testar e aprovar.
+
+
+## Movimento orgânico dos bichos (Raphael, 14 out)
+
+- Diagnóstico: o `BoneMotion` refazia a pose do zero a cada quadro, com senos, sem memória entre quadros, e por isso o movimento ficava duro. Solução só em código, em `BoneMotion.Organic.cs`. Pescoço, cauda e membrana das asas seguem a pose com mola de segunda ordem (t3ssel8r). A troca de movimento se funde em 0,22 s. O descanso tem respiração de ritmo variável e um olhar em volta por ruído suave. Os ossos que dão o golpe não levam mola, para o dano continuar caindo junto com o golpe.
+- Primeira afinação (amortecimento 0,3 a 0,6) ficou "esqueleto de borracha / tecido ao vento", nas palavras do Raphael. A afinação atual, com amortecimento perto de 1 e limite de dobra por osso de 6° a 14°, ele aprovou como melhor.
+- Noct: a morte com asas moles foi aprovada (antes ele flutuava apoiado na asa). A caminhada com IK deixou as pernas girando rápido, porque o pé não era restaurado a cada quadro. Raphael pediu para voltar à caminhada antiga, mantendo só o pé reto. Shadowmane com a camada orgânica foi aprovado; a caminhada de quadrúpede com pés plantados por IK fica.
+- Shadow Wave refeito: empina, bate as patas no chão em 0,48 s (quando a onda do efeito nasce) e fica abaixado empurrando até o impacto. Shadow Sting refeito: cauda erguida como a de um escorpião, bote em arco, chicote da base para a ponta no instante do dano. Formas conferidas por simulação offline no `shadowmane.glb`. Falta Raphael testar no Unity.
