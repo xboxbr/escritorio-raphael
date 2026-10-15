@@ -110,3 +110,21 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 - Instinto Predador: bônus inato permanente de +5% ataque físico e +5% velocidade em combate.
 - Rig recebe movimentos de costas, cabeça/pescoço, quatro patas e cauda, sincronizados com onda, ferrão, sopro e véu. Ícones recortados da imagem no encaixe circular do Cinderplate, efeitos originais. Textos PT/EN/ES integrados.
 - Código na `main` do jogo, commit `98dd98a`. Compilação C# aprovada, sem executar Editor ou jogo; testes de combate e aprovação visual pertencem a Raphael. Ver `assets/shadowmane/SOURCES.md`.
+
+
+## Revisão de Halan: Shadowmane (Raphael, 14 out)
+
+Estas regras substituem a configuração inicial do Shadowmane. Raphael optou por manter nomes em inglês.
+
+- Shadow Wave: físico Dark, grupo, poder20. Sorteio independente de80% de stun por1 turno para cada inimigo acertado.
+- Shadow Sting: físico Dark, único, poder100 e acerto100%. Sorteio separado de70% para Blind, reduzindo precisão50% por2 turnos.
+- Poison Breath: físico Poison, grupo, poder20, acerto100%. Cada inimigo acertado rola50% para Veneno; até3 acúmulos, cada um com3 ticks de10% HP máximo, no fim do turno.
+- Shadow Veil: Dark, buff em si mesmo, invisibilidade e estado inatingível contra ataques únicos e em área por2 turnos, +20% ataque físico e +20% velocidade por2 turnos, tudo garantido. Substitui camuflagem30% e imunidade a novos negativos da versão anterior. Condições já aplicadas continuam contando.
+- Recargas2/3/3/4 e passiva permanente5% preservadas. Commit local `f334a16` na branch `codex/shadowmane-ajustes-halan`; ainda sem push. Compilação externa C# aprovada, sem execução de Editor/jogo. Falta Raphael testar e confirmar. Fontes e backups em `assets/shadowmane/SOURCES.md`.
+
+
+## Instinto Predador — ordem do bônus em batalha (Raphael, 14 out)
+
+- Substitui a passiva inicial de5%: Dark, +20% de velocidade e +20% de ataque físico durante o combate. Nome traduzido conforme a língua.
+- Somar primeiro os bônus normais de atributos; a passiva multiplica o valor final de entrada por1,20. Exemplo explícito de Raphael: 200+200=400; em batalha, 400×1,20=480. Aplicação permanente e não dissipável, restrita ao combate.
+- Bônus temporário de20% da ultimate tem multiplicador separado: 1,20×1,20=1,44 enquanto ambos estão ativos. Asset, código e textos atualizados; C# compilado sem erros. Teste de gameplay pertence a Raphael.
