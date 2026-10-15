@@ -43,7 +43,7 @@ O que vale **agora**. Sem histórico de norte antigo.
 
 ## Elenco (Halan, 10 out)
 
-Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, ficha, luta e inimigo. Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. O corpo de cada um é a imagem anexada no filho. Não redesenhar. Mesh na Meshy até acabar o crédito; sem crédito, Tripo. Esqueleto na Nira. Movimentos: idle, cheer-up, dying, walking/moving, e um golpe padrão. Cinderplate e Hellflame têm habilidades implementadas pelas respectivas cartas; os outros onze ainda usam habilidades dummy. Hellflame testado no Unity por Raphael e confirmado como funcionando em 13/10/2026. Fila: [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo), filhos POK-112 a POK-124, assignee Raphael, Todo.
+Os 13 de `ativos/bichos/escolhidos` são os únicos bichos do jogo: coleção, ficha, luta e inimigo. Aurion, Blossom Queen, Cinderplate, Eclipse, Frostfang, Grizzleback, Hellflame, Lithon, Noct, Ruffletail, Shadowmane, Tidepaw, Vaelith. O corpo de cada um é a imagem anexada no filho. Não redesenhar. Mesh na Meshy até acabar o crédito; sem crédito, Tripo. Esqueleto na Nira. Movimentos: idle, cheer-up, dying, walking/moving, e um golpe padrão. Cinderplate, Hellflame, Vaelith e Shadowmane têm habilidades implementadas pelas respectivas cartas; os outros nove ainda usam habilidades dummy. Shadowmane integrado em 14/10/2026, aguardando teste de Raphael. Vaelith integrado em 14/10/2026, aguardando teste no Unity pelo Raphael. Hellflame testado no Unity por Raphael e confirmado como funcionando em 13/10/2026. Fila: [POK-111](https://linear.app/pokeland-vibes/issue/POK-111/elenco-os-13-de-escolhidos-substituem-os-bichos-do-jogo), filhos POK-112 a POK-124, assignee Raphael, Todo.
 
 ## Retratos (Raphael, 7 out)
 
@@ -86,3 +86,27 @@ A distribuição da luta 3v3 segue o print que o Halan mandou. O desenho é o ki
 ## Notas relacionadas
 
 - [[00 - Overview]] · [[03 - Plano de execução]] · [[04 - Recortes de inspiração]] · [[06 - Clima como coluna]] · [[07 - Kickoff 19 set]]
+
+
+## Vaelith (Raphael, 14 out)
+
+- Implementado conforme a ficha Vaelith-Oh; mantém o nome Vaelith, atributos-base, tipo da criatura e chances de acerto do cadastro existente, que a carta não redefine.
+- Passiva: qualquer criatura, aliada, inimiga ou o próprio Vaelith, usando skill Fire dá +10% de ataque físico e +5% de velocidade por 5 turnos. Até 5 acúmulos com durações individuais; no limite, renova o mais próximo de expirar. Um lançamento em área ativa uma vez.
+- Explosão divina: Fire, físico 30, grupo, +10 fúria adicional, Voo até o próximo turno, CD 1. Voo segue a proteção do Cinderplate, inclusive contra área; Ira da Terra atravessa e remove o estado.
+- Ciclone das sombras: Dark, físico 30, único, Chama Infernal até o próximo turno, CD 4.
+- Asas da morte: Flying, físico 60, único, custo de 50% da vida atual depois do golpe. Abate zera todas as recargas, sem repor fúria. Sem CD adicional indicado na ficha.
+- Punição divina de Oh: Fire, físico 20–200, único, poder proporcional à vida perdida (20 cheio; 110 com metade); CD 1 e fúria cheia. Aplica Chama da Ressurreição até o próximo turno.
+- **Chama da Ressurreição:** conforme esclarecimento explícito de Raphael, mantém pelo menos 1 HP até o próximo turno, não importa quantos ataques receba, e pode ser reaplicada a cada ultimate. Não cura nem se consome no primeiro dano letal. Chama Infernal também impede HP abaixo de 1 até o próximo turno. As duas não podem ser roubadas nem dissipadas.
+- Cinco ícones extraídos diretamente da ficha, em círculos 124×124 dentro de canvas 128×128, como Cinderplate. VFX originais com penas e asas incandescentes, fogo turbulento, ciclone violeta e penas azul-brancas. Raphael pediu fogo mais elaborado que o anterior.
+- Integração na branch `codex/vaelith-skills`, sem commit/push. Compilação externa de C# e testes matemáticos aprovados; não houve execução do Editor. Falta validação visual/combate por Raphael. Fontes e roteiro de teste em `assets/vaelith/SOURCES.md`.
+
+
+## Shadowmane (Raphael, 14 out)
+
+- Usa a carta que traz o título Dracolizar, mantendo Shadowmane no cadastro. Tipos Dark/Poison, atributos-base existentes preservados.
+- Shadow Wave: físico 30, grupo, 80% de atordoar por um turno ao acertar, CD2. Shadow Sting: físico 60, único, cegueira de -70% da precisão atual por dois turnos, CD3.
+- Poison Breath: grupo, sem dano imediato, 50% por alvo de aplicar veneno, CD3. Cada acúmulo causa 5% HP máximo no fim do turno por três turnos, máximo três, durações individuais; no limite renova o mais próximo de expirar.
+- Shadow Veil é ultimate em si mesmo, sem dano, CD4 e fúria cheia. Imunidade a novos negativos garantida por dois turnos; 30% de chance de Camuflagem por dois turnos. Camuflagem impede ataques únicos e permite área. Raphael escolheu explicitamente essas regras e os poderes/recargas propostos.
+- Instinto Predador: bônus inato permanente de +5% ataque físico e +5% velocidade em combate.
+- Rig recebe movimentos de costas, cabeça/pescoço, quatro patas e cauda, sincronizados com onda, ferrão, sopro e véu. Ícones recortados da imagem no encaixe circular do Cinderplate, efeitos originais. Textos PT/EN/ES integrados.
+- Código na `main` do jogo, commit `98dd98a`. Compilação C# aprovada, sem executar Editor ou jogo; testes de combate e aprovação visual pertencem a Raphael. Ver `assets/shadowmane/SOURCES.md`.

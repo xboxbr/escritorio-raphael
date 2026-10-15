@@ -19,7 +19,7 @@ Jogo original. Não é o fangame Pokeland. Código Unity: org `game-pkld`, repo 
 
 Ficha de nova criatura enviada por Raphael significa implementar o pacote completo de habilidades, dano, efeitos e ícones recortados da imagem. Padrão em `.cursor/rules/fichas-de-criaturas.mdc`.
 
-Não abrir, controlar ou executar o Editor Unity (nem em batch). Raphael testa no Unity. Ao entregar alterações, pedir o teste e a confirmação dele.
+Não abrir, controlar ou executar o Editor Unity (nem em batch) nem o jogo compilado no PC do Raphael. A IA só modifica arquivos; Raphael testa no Unity e diz se ficou certo ou errado. Ao entregar alterações, pedir o teste e a confirmação dele.
 
 ## Time
 
