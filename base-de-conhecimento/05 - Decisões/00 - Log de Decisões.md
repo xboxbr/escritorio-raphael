@@ -147,3 +147,15 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Primeira afinação (amortecimento 0,3 a 0,6) ficou "esqueleto de borracha / tecido ao vento", nas palavras do Raphael. A afinação atual, com amortecimento perto de 1 e limite de dobra por osso de 6° a 14°, ele aprovou como melhor.
 - Noct: a morte com asas moles foi aprovada (antes ele flutuava apoiado na asa). A caminhada com IK deixou as pernas girando rápido, porque o pé não era restaurado a cada quadro. Raphael pediu para voltar à caminhada antiga, mantendo só o pé reto. Shadowmane com a camada orgânica foi aprovado; a caminhada de quadrúpede com pés plantados por IK fica.
 - Shadow Wave refeito: empina, bate as patas no chão em 0,48 s (quando a onda do efeito nasce) e fica abaixado empurrando até o impacto. Shadow Sting refeito: cauda erguida como a de um escorpião, bote em arco, chicote da base para a ponta no instante do dano. Formas conferidas por simulação offline no `shadowmane.glb`. Falta Raphael testar no Unity.
+
+
+## Zênite, o mapa da luz (Raphael, 16 out)
+
+- O jogo tem tema de trevas e luz. O Rift ficou com as trevas, e o Zênite é o par da luz: um disco de arenito com sol dourado, flutuando sobre nuvens na alvorada. O nome foi escolhido entre Zênite, Aurora e Halo.
+- Raphael aprovou a imagem de conceito. As seis peças foram geradas na Meshy: imagem de design no nano-banana-pro e malha no meshy-t2.5 em smart topology, com cerca de 5 mil triângulos cada, leves para o Android. A textura é a embutida no GLB, sem inverter (inverter embaralhou na primeira tentativa).
+- Contraste: o chão é de tom médio, não branco, para os bichos se destacarem. As peças altas ficam no fundo e as baixas na frente, num anel de 12 a 16 m, como no Rift.
+- A escolha de área segue o visual da Coleção: fundo, barra, voltar e placas. A moldura do cartão foi feita no SpriteCook, com as molduras do kit "HUD místico" como referência. O cartão mostra só o nome e a prévia, sem descrição, a pedido do Raphael.
+
+## Esqueletos com outra convenção de nomes (16 out)
+
+- O rig novo do Grizzleback chegou com `arm_0N_L/R`, `leg_0N_L/R`, `spine_03`, `neck_0N`, `head_01`, `jaw` e `tail_0N`. O `BoneMotion` agora reconhece três convenções: `Hips/Left_*`, a da Nira (`upperarm_l`, `thigh_l`) e esta. Rigs futuros com esses nomes entram sem código novo.
