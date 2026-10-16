@@ -10,6 +10,12 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 16 out, noite: jogo na `main` em `403eded` (merge de `aventura-mapas-hud-hellflame`; commits `c56ee54` bichos, `d88e093` HUD da tela inicial, `c39fab1` Aventura). Linear: [POK-153](https://linear.app/pokeland-vibes/issue/POK-153/o-hellflame-ganha-esqueleto-novo-e-movimentos-de-fantasma), [POK-154](https://linear.app/pokeland-vibes/issue/POK-154/a-tela-inicial-ganha-a-hud-no-visual-dos-outros-menus) e [POK-155](https://linear.app/pokeland-vibes/issue/POK-155/a-aventura-ganha-a-escadaria-do-alvorecer-o-vale-do-eclipse-e-a), todos Done.
+  - Aventura com dois mapas e escolha de mapa: Escadaria do Alvorecer (luz) e Vale do Eclipse (trevas). Os dois usam a mesma rota de três praças flutuantes; o próximo (floresta) **não pode** repetir esse traçado (pedido do Raphael).
+  - ⚠️ Inimigos da Aventura em 20% de vida e ataque (`ArenaBootstrap.TrailFoeStrength`), teste do Raphael. Voltar para 1.
+  - Os `.zip` em `Cenario/Resources/outros` ficaram fora do git (cópias dos FBX já extraídos); falta o Raphael dizer se movo para `assets/biblioteca-3d`.
+  - 3D agora no Tripo (CLI oficial, créditos de API: restam 820). Imagens de design: o Raphael gera no Nano Banana Pro da conta dele a partir dos prompts que eu passo. Meshy com ~14 créditos. SpriteCook 174.
+
 - 16 out: jogo na `main` em `943d1e7` (merge de `zenite-aurion-grizzleback`; commits `a06cc34` bichos e `5de0ee2` mapa). Linear: [POK-112](https://linear.app/pokeland-vibes/issue/POK-112/aurion-mesh-esqueleto-e-entrada-no-jogo) Done; [POK-151](https://linear.app/pokeland-vibes/issue/POK-151/o-grizzleback-ganha-cauda-e-mandibula-no-esqueleto-novo) e [POK-152](https://linear.app/pokeland-vibes/issue/POK-152/a-lutar-ganha-o-zenite-o-mapa-da-luz) Done; comentário em POK-117.
   - Aurion: `com-esqueleto/aurion.glb` substituiu o FBX sem rig. Movimentos de serpente próprios (`BoneMotion.Aurion`). Raphael viu andar, golpe e morte; o comemorar foi refeito a pedido dele.
   - Grizzleback: rig novo com nomes `arm_0N/leg_0N/spine_03/neck/head_01/jaw/tail_0N`, terceira convenção reconhecida pelo `BoneMotion`. Malha, UV e textura iguais. Cauda e mandíbula animadas.

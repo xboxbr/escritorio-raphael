@@ -159,3 +159,11 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 ## Esqueletos com outra convenção de nomes (16 out)
 
 - O rig novo do Grizzleback chegou com `arm_0N_L/R`, `leg_0N_L/R`, `spine_03`, `neck_0N`, `head_01`, `jaw` e `tail_0N`. O `BoneMotion` agora reconhece três convenções: `Hips/Left_*`, a da Nira (`upperarm_l`, `thigh_l`) e esta. Rigs futuros com esses nomes entram sem código novo.
+
+## Aventura: mapas, câmera e geração 3D (Raphael, 16 out)
+
+- A floresta procedural antiga saiu. A Aventura tem mapas escolhidos numa tela igual à do 3v3: a Escadaria do Alvorecer (luz) e o Vale do Eclipse (trevas). O time anda da esquerda para a direita; a câmera ortográfica gira só 180 graus pelo lado da câmera, então o cenário alto fica ao fundo e o lado de lá não é construído.
+- Câmera escolhida pelo Raphael no Play: 8 graus, giro 11, zoom 0,49, altura 0,45. Com câmera baixa, nada alto na borda da frente (tapa pés e barras de vida).
+- O Raphael apontou que os dois mapas ficaram com o mesmo traçado, só com cores diferentes, e longe do caminho do conceito. Regra para os próximos: cada mapa com rota e composição próprias, seguindo o conceito aprovado.
+- 3D: o Tripo substitui a Meshy (créditos de API são separados dos do Studio). Para economizar, as imagens de design saem do Nano Banana Pro do Raphael; o Tripo só faz o 3D (v3.1 com limite de faces, 30 créditos; o P1 low-poly custa 50).
+- Desempenho: a geometria procedural dos mapas não projeta sombra (só recebe).
