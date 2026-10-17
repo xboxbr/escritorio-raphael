@@ -197,3 +197,11 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Replay: "Repetir esta luta" e a janela Game > Log da luta > Replays (1x/2x/4x no Play, sem animação fora). O modo sem animação é o mesmo loop da luta, não uma cópia.
 - Testes: Game > Testar habilidades > Todos roda os 6 testes de combate.
 - A ficha do Vaelith (Bicho 13) nunca tinha entrado no git; foi restaurada de `assets/vaelith/staged`. Lição: conferir se o `.asset` da ficha entrou no commit.
+
+## Desempenho da Aventura e câmera (17 out)
+
+- O editor no Windows usa **Direct3D11**: o DX12 dava trancos de 40-70 ms ao preparar materiais na hora (medido com Profiler; 7-15 engasgos por caminhada → 0-1). FPS travado em 60.
+- O peso de desenho da luta é a **interface (GUI antiga do Unity)**, não o cenário: 78 de 120 grupos num quadro (cenário 6, já juntado pelo SRP Batcher). Otimizar cenário com static batching não muda nada; o próximo ganho real é refazer barras e botões num sistema que agrupa desenhos.
+- Erro "Invalid AABB" em massa = NaN em transform; `Pow` de seno pode dar NaN (seno de π sai levemente negativo). Ferramentas só do editor: Game > Mostrar FPS, Game > Medir caminhada da Aventura.
+- Câmera da Aventura: giro de no máximo 38,5° para cada lado da vista lateral da clareira (nunca mostrar as costas dos times); ângulo mínimo 10°.
+- Árvore ancestral do Bosque refeita no Tripo com textura detalhada (40 créditos, 28,7 mil triângulos). Ao importar do Tripo, tirar do GLB as texturas embutidas que o jogo não usa.
