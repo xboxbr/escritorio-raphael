@@ -181,3 +181,7 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - O efeito chega no 1º turno dele e a cada 4 (1º, 5º, 9º...), por 2 turnos. Encouraçado tem 60% de acerto sem o efeito; as outras skills sem acerto na ficha usam 100%.
 - "Fortalece toda estrutura corporal" (Encouraçado) ficou só visual; altura e peso da ficha não existem no jogo.
 - Regras novas reaproveitáveis: condição de efeito (com/sem um estado do lançador), efeito antes do golpe, acerto e poder condicionais, efeitos Freeze e PowerDown.
+
+## Efeitos de skills em grupo (Raphael, 17 out)
+
+- Magia de área não se divide em três cópias, uma por alvo: é um efeito único e maior no centro do grupo, ou uma sequência que varre a linha (estouros em fila, como bombardeio). Só farpas, tiros e coisas pequenas fazem sentido separados por alvo. Regra gravada em `.cursor/rules/fichas-de-criaturas.mdc`.
