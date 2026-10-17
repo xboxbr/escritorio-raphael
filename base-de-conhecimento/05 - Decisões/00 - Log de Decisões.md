@@ -174,3 +174,10 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Orçamento para celular, a pedido do Raphael (ele deixou a conta comigo): ~150 mil triângulos visíveis de cenário e ~100 chamadas de desenho; peças de destaque 10 mil, médias 6-8 mil, repetidas 3-5 mil; o que fica atrás da primeira fileira vira painel 2D; sombra só perto da trilha; nada construído onde a câmera não vê.
 - O shader de chão antigo (AdventureGround) não importava em nenhuma plataforma; os chões novos usam passes simples (ChaoBosque), no estilo dos shaders de água.
 - Peças podem ser corrigidas no próprio GLB sem refazer a malha (triângulos degenerados), como as folhas da árvore ancestral.
+
+## Frostfang: ficha do Cristal Yuki (Raphael, 17 out)
+
+- O bicho continua se chamando Frostfang; "Cristal Yuki" é o nome do efeito da passiva Zero Absoluto.
+- O efeito chega no 1º turno dele e a cada 4 (1º, 5º, 9º...), por 2 turnos. Encouraçado tem 60% de acerto sem o efeito; as outras skills sem acerto na ficha usam 100%.
+- "Fortalece toda estrutura corporal" (Encouraçado) ficou só visual; altura e peso da ficha não existem no jogo.
+- Regras novas reaproveitáveis: condição de efeito (com/sem um estado do lançador), efeito antes do golpe, acerto e poder condicionais, efeitos Freeze e PowerDown.

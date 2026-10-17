@@ -10,6 +10,9 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 17 out, madrugada: jogo na `main` em `12c8f86` (merge `57d9e39` de `frostfang-cristal-yuki`: `78a42d9` ficha sem corte no topo, `e99a8c1` Frostfang; depois `12c8f86` tirou do git os ZIPs de `Cenario/Resources/outros`, que entraram por engano). Linear: [POK-177](https://linear.app/pokeland-vibes/issue/POK-177/o-frostfang-ganha-a-ficha-nova-zero-absoluto-cristal-yuki-e-quatro) e [POK-178](https://linear.app/pokeland-vibes/issue/POK-178/a-ficha-para-de-cortar-o-topo-do-bicho) Done.
+  - Frostfang com a ficha nova (Zero Absoluto / Cristal Yuki). O bicho continua Frostfang; Cristal Yuki é o efeito. Falta o Raphael confirmar no Play (golpes, congelamento, aura) e rodar Game > Testar habilidades > Frostfang.
+
 - 16 out, fim da noite: jogo na `main` em `00acd17` (merge de `bosque-do-riacho`: `59f962e` Hellflame, `1dc02af` Bosque do Riacho; antes `3434c86` apagou os arquivos do mapa antigo). Linear: [POK-176](https://linear.app/pokeland-vibes/issue/POK-176/a-aventura-ganha-o-bosque-do-riacho-o-terceiro-mapa) Done; comentário em POK-153.
   - Aventura com três mapas: Escadaria do Alvorecer, Vale do Eclipse e Bosque do Riacho (chão contínuo, riacho, cachoeira, ponte, árvore ancestral sem folhas).
   - Hellflame: giro ao ficar parado/comemorar tratado sem confirmação (Editor.log com milhares de "Invalid AABB / transform is corrupt"). Pedir ao Raphael para confirmar no Play.
