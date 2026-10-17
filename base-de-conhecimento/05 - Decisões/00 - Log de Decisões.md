@@ -167,3 +167,10 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - O Raphael apontou que os dois mapas ficaram com o mesmo traçado, só com cores diferentes, e longe do caminho do conceito. Regra para os próximos: cada mapa com rota e composição próprias, seguindo o conceito aprovado.
 - 3D: o Tripo substitui a Meshy (créditos de API são separados dos do Studio). Para economizar, as imagens de design saem do Nano Banana Pro do Raphael; o Tripo só faz o 3D (v3.1 com limite de faces, 30 créditos; o P1 low-poly custa 50).
 - Desempenho: a geometria procedural dos mapas não projeta sombra (só recebe).
+
+## Bosque do Riacho e orçamento de peso (Raphael, 16 out)
+
+- O terceiro mapa da Aventura segue o conceito de floresta aprovado, com lógica própria (chão contínuo, trilha em S, riacho que cruza sob a ponte), para não repetir as ilhas dos dois primeiros.
+- Orçamento para celular, a pedido do Raphael (ele deixou a conta comigo): ~150 mil triângulos visíveis de cenário e ~100 chamadas de desenho; peças de destaque 10 mil, médias 6-8 mil, repetidas 3-5 mil; o que fica atrás da primeira fileira vira painel 2D; sombra só perto da trilha; nada construído onde a câmera não vê.
+- O shader de chão antigo (AdventureGround) não importava em nenhuma plataforma; os chões novos usam passes simples (ChaoBosque), no estilo dos shaders de água.
+- Peças podem ser corrigidas no próprio GLB sem refazer a malha (triângulos degenerados), como as folhas da árvore ancestral.

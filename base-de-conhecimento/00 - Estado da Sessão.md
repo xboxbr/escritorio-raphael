@@ -10,6 +10,13 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 16 out, fim da noite: jogo na `main` em `00acd17` (merge de `bosque-do-riacho`: `59f962e` Hellflame, `1dc02af` Bosque do Riacho; antes `3434c86` apagou os arquivos do mapa antigo). Linear: [POK-176](https://linear.app/pokeland-vibes/issue/POK-176/a-aventura-ganha-o-bosque-do-riacho-o-terceiro-mapa) Done; comentário em POK-153.
+  - Aventura com três mapas: Escadaria do Alvorecer, Vale do Eclipse e Bosque do Riacho (chão contínuo, riacho, cachoeira, ponte, árvore ancestral sem folhas).
+  - Hellflame: giro ao ficar parado/comemorar tratado sem confirmação (Editor.log com milhares de "Invalid AABB / transform is corrupt"). Pedir ao Raphael para confirmar no Play.
+  - ⚠️ Inimigos da Aventura ainda em 20% (`TrailFoeStrength`).
+  - Orçamento mobile combinado: ~150 mil triângulos no quadro; destaque 10 mil, médias 6-8 mil, repetidas 3-5 mil, fundo 2D. Pendente: OK do Raphael para refazer 8 peças de destaque em 8-10 mil (240 créditos Tripo).
+  - Créditos: Tripo 460, SpriteCook 128, Meshy ~14.
+
 - 16 out, noite: jogo na `main` em `403eded` (merge de `aventura-mapas-hud-hellflame`; commits `c56ee54` bichos, `d88e093` HUD da tela inicial, `c39fab1` Aventura). Linear: [POK-153](https://linear.app/pokeland-vibes/issue/POK-153/o-hellflame-ganha-esqueleto-novo-e-movimentos-de-fantasma), [POK-154](https://linear.app/pokeland-vibes/issue/POK-154/a-tela-inicial-ganha-a-hud-no-visual-dos-outros-menus) e [POK-155](https://linear.app/pokeland-vibes/issue/POK-155/a-aventura-ganha-a-escadaria-do-alvorecer-o-vale-do-eclipse-e-a), todos Done.
   - Aventura com dois mapas e escolha de mapa: Escadaria do Alvorecer (luz) e Vale do Eclipse (trevas). Os dois usam a mesma rota de três praças flutuantes; o próximo (floresta) **não pode** repetir esse traçado (pedido do Raphael).
   - ⚠️ Inimigos da Aventura em 20% de vida e ataque (`ArenaBootstrap.TrailFoeStrength`), teste do Raphael. Voltar para 1.
