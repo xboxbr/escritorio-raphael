@@ -189,3 +189,11 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 ## Pernas nos golpes de avanço (Raphael, 17 out)
 
 - Frostfang ganhou passadas presas ao deslocamento nos golpes de avanço; Raphael aprovou ("ficou melhor") e pediu o mesmo em todos os bichos quando as skills oficiais forem criadas. Regra em `.cursor/rules/fichas-de-criaturas.mdc`.
+
+## Seed, log detalhado e replay da luta (POK-161, 162, 163 · 17 out)
+
+- A luta sorteia só pelo `BattleRng` (seed por partida); sorteio visual fica no `UnityEngine.Random`.
+- Log detalhado do time, desligado por padrão: cada golpe escreve os números de quem calcula (não refaz a conta), em texto e CSV em `persistentDataPath/battle-logs`. Com ele desligado nada é gravado, nem o JSON do replay.
+- Replay: "Repetir esta luta" e a janela Game > Log da luta > Replays (1x/2x/4x no Play, sem animação fora). O modo sem animação é o mesmo loop da luta, não uma cópia.
+- Testes: Game > Testar habilidades > Todos roda os 6 testes de combate.
+- A ficha do Vaelith (Bicho 13) nunca tinha entrado no git; foi restaurada de `assets/vaelith/staged`. Lição: conferir se o `.asset` da ficha entrou no commit.
