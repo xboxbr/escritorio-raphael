@@ -185,3 +185,7 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 ## Efeitos de skills em grupo (Raphael, 17 out)
 
 - Magia de área não se divide em três cópias, uma por alvo: é um efeito único e maior no centro do grupo, ou uma sequência que varre a linha (estouros em fila, como bombardeio). Só farpas, tiros e coisas pequenas fazem sentido separados por alvo. Regra gravada em `.cursor/rules/fichas-de-criaturas.mdc`.
+
+## Pernas nos golpes de avanço (Raphael, 17 out)
+
+- Frostfang ganhou passadas presas ao deslocamento nos golpes de avanço; Raphael aprovou ("ficou melhor") e pediu o mesmo em todos os bichos quando as skills oficiais forem criadas. Regra em `.cursor/rules/fichas-de-criaturas.mdc`.
