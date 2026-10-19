@@ -10,6 +10,10 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 19 out, tarde: jogo na `main` em `2ddcebf` (POK-164 mola no Play + rig do Frostfang), antes `388015c` (POK-195 Ruffletail e Warphant fora) e `a5ffcab` (POK-199 patas no chão). As três Done no Linear.
+  - Próximas combinadas: POK-168 (bancada de efeitos) e POK-165 (mola bicho a bicho, trabalho de olho do Raphael com vídeo e OK do Halan; começa pelo Grizzleback). Depois POK-174/175/202; POK-201 (Thunderhawk) espera imagem do Discord e crédito.
+  - Vale lembrar na POK-165: a mola só aparece quando o corpo se mexe; Sacudir + câmera Lado. Regra de bolso: cauda pesada ~3 / 0,7 / 0,5 / 15, ponta mais solta.
+
 - 19 out, madrugada: jogo na `main` em `07f9af1` (POK-197 `e838a08`), antes `06ad137` (POK-198 `6d29a12`) e `f199a68` (POK-200). Linear: [POK-200](https://linear.app/pokeland-vibes/issue/POK-200), [POK-198](https://linear.app/pokeland-vibes/issue/POK-198) e [POK-197](https://linear.app/pokeland-vibes/issue/POK-197) Done, com prints anexados. Antes no mesmo dia: POK-156, 185 a 193, 196 fechadas (condições, seed, replay, log maior, alvo antes da skill).
   - Próxima da fila combinada com o Raphael: [POK-199](https://linear.app/pokeland-vibes/issue/POK-199) (patas no chão no idle). Depois POK-202 (tirar campos de um bicho só do CreatureSkill, backlog).
   - Pendentes do Halan anotados nas tarefas: vídeos/logs das condições, decisão sobre tradução dos nomes de skill (POK-84), renovar/somar dos efeitos.

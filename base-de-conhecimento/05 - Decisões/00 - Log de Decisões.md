@@ -223,3 +223,12 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Centro do bicho na plataforma é o tronco (`CreaturePlacement.CenterOnTorso`): meio entre quadril e peito; cauda, asa e chifre fora da conta; patas no chão como antes. Nos rigs numerados o peito é a primeira bifurcação de 3 ossos subindo a espinha pela linha do meio. Todos os 14 rigs têm `pelvis` (Hellflame `mixamorigHips`); o campo `torsoPoint` da ficha é só reserva. Menu Game > Depurar > Centrar pela caixa (PlayerPrefs) para comparar.
 - Segurar o bicho na luta (0,4 s) abre modal próprio ao lado dele com os dez atributos calculados no momento, verde ▲ / vermelho ▼ contra o valor de entrada; soltar fecha; o log não é mais tocado. Nível ainda é 1 fixo em todo lugar.
 - Prints valem no lugar do vídeo nas tarefas do Halan (Raphael, 19 out); vão anexados na tarefa do Linear como prancha única.
+
+## Patas no chão, elenco enxuto e mola no Play (POK-199, 195, 164 · 19 out)
+
+- Idle com pés presos no chão (`BoneMotion.Plant`): cada pata de apoio marcada na pose de descanso e alcançada por IK; quadril desce até 0,8% da altura com a respiração. Hellflame e Vaelith fora. Vale para o elenco inteiro, sem código por bicho. Menu Depurar > Idle com pés soltos para comparar.
+- Ruffletail e Warphant saíram. Os números 10 e 14 ficam aposentados: `MonsterSpellFx.Names` é indexado pelo número e as vagas ficam em branco. Regras de rig que nasceram com eles ficam.
+- Mola por osso em asset (`MotionTuning`, `Resources/Mola/<malha>.asset`) e janela Game > Mola > Ajustar no Play. Mola **reage** ao movimento: para enxergar, usar Sacudir ou uma skill, com a câmera de Lado. Nenhum bicho tem asset ainda; o ajuste é a POK-165, com vídeo e OK do Halan.
+- Rig do Frostfang corrigido no .glb (só nomes): a cauda vinha como perna direita e a perna direita como bone_57..62. Regra: **nome errado se conserta no rig, não no código** (Raphael, 19 out). Ferramenta: `glb_rename.py` no scratchpad (reescreve o chunk JSON do .glb).
+- Palcos da Coleção nomeados por tela (Ficha/Time/Coleção Bicho NN), para ferramentas distinguirem o bicho visível.
+- Testes "Todos" só fora do Play: dentro, todos falham com "Pare o Play" e não é defeito.
