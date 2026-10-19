@@ -216,3 +216,10 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Descrição da skill gerada dos campos (SkillText) nas 3 línguas. **O texto escrito à mão pelo Halan prevalece sozinho** (Raphael, 18 out: "as decisões do Halan prevalecem"). Nomes de skill traduzidos vêm da POK-84 (Halan).
 - Campos de um bicho só no CreatureSkill não foram removidos: tarefa própria, com log antes e depois.
 - Times 15% mais perto (3,06 no 3v3; 3,23 na Aventura); botão de skill sem o arco, com anel fino.
+
+## Tipos, centro pelo tronco e modal de atributos (POK-200, 198, 197 · 18-19 out)
+
+- Tipos dos 12 bichos pela tabela do Halan (Aurion Dragão/Luz, Frostfang Metal/Gelo, Shadowmane Veneno/Sombrio…). O elemento da skill é do golpe, não muda com o bicho. `TypeBadge`: pílula na cor do tipo, 19 tipos (Luz com borda dourada), sempre abaixo do Power no Time e na Coleção (Raphael preferiu uniforme), mini nas fotinhas, canto da ficha.
+- Centro do bicho na plataforma é o tronco (`CreaturePlacement.CenterOnTorso`): meio entre quadril e peito; cauda, asa e chifre fora da conta; patas no chão como antes. Nos rigs numerados o peito é a primeira bifurcação de 3 ossos subindo a espinha pela linha do meio. Todos os 14 rigs têm `pelvis` (Hellflame `mixamorigHips`); o campo `torsoPoint` da ficha é só reserva. Menu Game > Depurar > Centrar pela caixa (PlayerPrefs) para comparar.
+- Segurar o bicho na luta (0,4 s) abre modal próprio ao lado dele com os dez atributos calculados no momento, verde ▲ / vermelho ▼ contra o valor de entrada; soltar fecha; o log não é mais tocado. Nível ainda é 1 fixo em todo lugar.
+- Prints valem no lugar do vídeo nas tarefas do Halan (Raphael, 19 out); vão anexados na tarefa do Linear como prancha única.

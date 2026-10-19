@@ -10,6 +10,11 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 19 out, madrugada: jogo na `main` em `07f9af1` (POK-197 `e838a08`), antes `06ad137` (POK-198 `6d29a12`) e `f199a68` (POK-200). Linear: [POK-200](https://linear.app/pokeland-vibes/issue/POK-200), [POK-198](https://linear.app/pokeland-vibes/issue/POK-198) e [POK-197](https://linear.app/pokeland-vibes/issue/POK-197) Done, com prints anexados. Antes no mesmo dia: POK-156, 185 a 193, 196 fechadas (condições, seed, replay, log maior, alvo antes da skill).
+  - Próxima da fila combinada com o Raphael: [POK-199](https://linear.app/pokeland-vibes/issue/POK-199) (patas no chão no idle). Depois POK-202 (tirar campos de um bicho só do CreatureSkill, backlog).
+  - Pendentes do Halan anotados nas tarefas: vídeos/logs das condições, decisão sobre tradução dos nomes de skill (POK-84), renovar/somar dos efeitos.
+  - Testes: Game > Testar habilidades > Todos roda 10 (passaram em 19 out). Compilação offline pelo `compile.py` do scratchpad precisa listar arquivo novo.
+
 - 17 out, madrugada: jogo na `main` em `12c8f86` (merge `57d9e39` de `frostfang-cristal-yuki`: `78a42d9` ficha sem corte no topo, `e99a8c1` Frostfang; depois `12c8f86` tirou do git os ZIPs de `Cenario/Resources/outros`, que entraram por engano). Linear: [POK-177](https://linear.app/pokeland-vibes/issue/POK-177/o-frostfang-ganha-a-ficha-nova-zero-absoluto-cristal-yuki-e-quatro) e [POK-178](https://linear.app/pokeland-vibes/issue/POK-178/a-ficha-para-de-cortar-o-topo-do-bicho) Done.
   - Frostfang com a ficha nova (Zero Absoluto / Cristal Yuki). O bicho continua Frostfang; Cristal Yuki é o efeito. Falta o Raphael confirmar no Play (golpes, congelamento, aura) e rodar Game > Testar habilidades > Frostfang.
 
