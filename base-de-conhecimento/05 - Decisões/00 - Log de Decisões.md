@@ -205,3 +205,14 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Erro "Invalid AABB" em massa = NaN em transform; `Pow` de seno pode dar NaN (seno de π sai levemente negativo). Ferramentas só do editor: Game > Mostrar FPS, Game > Medir caminhada da Aventura.
 - Câmera da Aventura: giro de no máximo 38,5° para cada lado da vista lateral da clareira (nunca mostrar as costas dos times); ângulo mínimo 10°.
 - Árvore ancestral do Bosque refeita no Tripo com textura detalhada (40 créditos, 28,7 mil triângulos). Ao importar do Tripo, tirar do GLB as texturas embutidas que o jogo não usa.
+
+## Fila de condições na luta fechada (POK-185 a 192 · 18 out)
+
+- Alvo antes da skill (POK-193): a vez abre com inimigo mirado e seta; tocar na skill dispara na hora. Selo de alcance no canto inferior esquerdo do ícone da skill (bonequinho só; três para área; anel para si mesmo).
+- Relógio do turno: regeneração no começo; controle tira a vez sem dano; ticks no fim e só depois as durações descontam. Morte por tick é kill de quem aplicou.
+- Chance é de cada efeito (effectChance da skill saiu); sem chance = 100; imune não rola. Mesma skill renova (não soma), fontes diferentes somam: propostas, o Halan confirma no Play.
+- Ticks: 1 tick = 1% do HP máximo; Veneno, Queimadura, Sangramento, Maldição; os dois últimos bloqueiam cura.
+- Sete controles e cinco bloqueios implementados; menu Game > Depurar aplica qualquer um no Play.
+- Descrição da skill gerada dos campos (SkillText) nas 3 línguas. **O texto escrito à mão pelo Halan prevalece sozinho** (Raphael, 18 out: "as decisões do Halan prevalecem"). Nomes de skill traduzidos vêm da POK-84 (Halan).
+- Campos de um bicho só no CreatureSkill não foram removidos: tarefa própria, com log antes e depois.
+- Times 15% mais perto (3,06 no 3v3; 3,23 na Aventura); botão de skill sem o arco, com anel fino.
