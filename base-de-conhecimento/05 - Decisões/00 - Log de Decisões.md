@@ -242,3 +242,12 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - O catálogo de idioma corta espaços nas pontas dos valores: espaço entre pedaços de frase vai no código.
 - YAML de asset do Unity: linha em branco dentro de um bloco corta a leitura do resto. Script que migra asset não deixa linha em branco.
 - Testes "Todos" só com o Play parado (o ▶ do topo cinza).
+
+## Thunderhawk e avisos (POK-201 · 20 out)
+
+- Malha de bicho novo: o Raphael gera no Tripo Studio com os créditos da conta dele (a API do terminal tem pouco crédito) e põe em `assets/<bicho>/`; o José renomeia ossos, liga no jogo e anima. Exportar textura em 8K se a de 2K borrar; o Unity importa em 2048 (orçamento de memória no celular).
+- Rig do Tripo pode trocar nomes (cauda como perna). Conferir pelo dump do .glb e renomear no próprio .glb.
+- Textura de rig exportada fora do .glb pode vir invertida em V: decidir pela continuidade de cor nas costuras de UV.
+- A medida da malha assada (BakeMesh × localToWorld) aplica a escala duas vezes. Corrigido só no Thunderhawk; os outros bichos têm ajustes de escala à mão em cima disso.
+- Morte de ave com asas no plano do peito: a do Vaelith (de lado) deixa a asa de escora. Pendente.
+- Coleção: 96 entre fileiras. Aurion 14 cm mais baixo no palco.

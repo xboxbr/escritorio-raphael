@@ -10,6 +10,8 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 20 out, tarde: jogo na `main` em `7147d8f` (Thunderhawk + avisos limpos). POK-201 In Progress: falta a morte do Thunderhawk ficar boa. POK-175 espera OK do Halan. POK-165 (mola) para depois.
+
 - 20 out: jogo na `main` em `f288525` (POK-202), antes `912d655` (POK-175, aguarda OK do Halan, segue In Progress), `7a65250` (POK-174), `500eb9d` (POK-168). 168, 174 e 202 Done.
   - Próximas: POK-165 (mola bicho a bicho, Raphael com vídeo), POK-201 (Thunderhawk: imagem do Discord + crédito). Opcional: limpar os avisos de `unityBackgroundScaleMode` (32 lugares) com uma função no ChromeArt.
 
