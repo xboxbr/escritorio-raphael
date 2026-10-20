@@ -232,3 +232,13 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Rig do Frostfang corrigido no .glb (só nomes): a cauda vinha como perna direita e a perna direita como bone_57..62. Regra: **nome errado se conserta no rig, não no código** (Raphael, 19 out). Ferramenta: `glb_rename.py` no scratchpad (reescreve o chunk JSON do .glb).
 - Palcos da Coleção nomeados por tela (Ficha/Time/Coleção Bicho NN), para ferramentas distinguirem o bicho visível.
 - Testes "Todos" só fora do Play: dentro, todos falham com "Pare o Play" e não é defeito.
+
+## Bancada, regra de HUD, ficha nova e regras únicas (POK-168, 174, 175, 202 · 20 out)
+
+- Bancada de efeitos é janela do editor (Game > VFX > Bancada de efeitos) que monta a luta real sem turnos no Play, não cena à parte: o jogo tem uma cena só. Limites propostos para um efeito no celular: 400 partículas e 30 batches a mais (revisar medindo num aparelho).
+- Regra de HUD mora em `unity/.cursor/rules/hud.mdc`, carregada pelo CLAUDE.md do jogo e do escritório. Tela nova começa do `HudPanel`; no fim, rodar o checklist da regra e escrever o resultado.
+- Ficha nova (POK-175) na distribuição dos prints: lista vertical de bichos à esquerda, bicho no centro sem moldura, painel com sub-abas (Atributos/Valores), trilho à direita, painel secundário por cima do bicho. Precisão, evasão, crítico e evasão de crítico fora do hexágono, em %. Recursos do player e ações rápidas (além de Evoluir) esperam os sistemas existirem. Espera o OK do Halan.
+- Regras de um bicho só viram a lista `unique` da skill (`UniqueRule`); skill nova nunca precisa. Prova de refatoração de combate: gravar uma luta antes, repetir sem animação depois com as fichas guardadas e com as de agora, e comparar o CSV golpe a golpe.
+- O catálogo de idioma corta espaços nas pontas dos valores: espaço entre pedaços de frase vai no código.
+- YAML de asset do Unity: linha em branco dentro de um bloco corta a leitura do resto. Script que migra asset não deixa linha em branco.
+- Testes "Todos" só com o Play parado (o ▶ do topo cinza).

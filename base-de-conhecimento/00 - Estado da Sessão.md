@@ -10,6 +10,9 @@ Retomada. O que **não** se deduz olhando a pasta. Decisões: [[00 - Log de Deci
 
 ## Agora
 
+- 20 out: jogo na `main` em `f288525` (POK-202), antes `912d655` (POK-175, aguarda OK do Halan, segue In Progress), `7a65250` (POK-174), `500eb9d` (POK-168). 168, 174 e 202 Done.
+  - Próximas: POK-165 (mola bicho a bicho, Raphael com vídeo), POK-201 (Thunderhawk: imagem do Discord + crédito). Opcional: limpar os avisos de `unityBackgroundScaleMode` (32 lugares) com uma função no ChromeArt.
+
 - 19 out, tarde: jogo na `main` em `2ddcebf` (POK-164 mola no Play + rig do Frostfang), antes `388015c` (POK-195 Ruffletail e Warphant fora) e `a5ffcab` (POK-199 patas no chão). As três Done no Linear.
   - Próximas combinadas: POK-168 (bancada de efeitos) e POK-165 (mola bicho a bicho, trabalho de olho do Raphael com vídeo e OK do Halan; começa pelo Grizzleback). Depois POK-174/175/202; POK-201 (Thunderhawk) espera imagem do Discord e crédito.
   - Vale lembrar na POK-165: a mola só aparece quando o corpo se mexe; Sacudir + câmera Lado. Regra de bolso: cauda pesada ~3 / 0,7 / 0,5 / 15, ponta mais solta.
