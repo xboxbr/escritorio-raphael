@@ -251,3 +251,12 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - A medida da malha assada (BakeMesh × localToWorld) aplica a escala duas vezes. Corrigido só no Thunderhawk; os outros bichos têm ajustes de escala à mão em cima disso.
 - Morte de ave com asas no plano do peito: a do Vaelith (de lado) deixa a asa de escora. Pendente.
 - Coleção: 96 entre fileiras. Aurion 14 cm mais baixo no palco.
+
+## Main remota sobrescrita, impacto, golpe em poses e cor dos bichos (20 out, noite)
+
+- Em 20 out a `main` do GitHub do jogo foi trocada à força por uma cópia reescrita de 8 out (autor não identificado). Raphael: a `main` do PC dele é a principal; só se baixa commit do Halan; o trabalho segue local e sobe depois. Cópias: `backup/main-2026-10-20` (nossa) e `main-sobrescrita-2026-10-20` (a de 8 out, a descartar em ~20 nov se nada dela for usado).
+- Impacto do golpe (POK-169, aprovado pelo Halan): parada 0,04/0,08/0,12 s, tremor (1,8x em área), clarão, recuo do peito, faíscas no contato.
+- Golpe em poses-chave (POK-166, em prova): asset por bicho em `Resources/Golpe`; o dano cai no fim da fase do golpe. Grizzleback primeiro.
+- Cor dos bichos por mapa (Game > VFX > Cor dos bichos): saturação/contraste da textura por blit, luz própria e sombra até 3; os bichos não recebem sombra projetada. Rift aprovada em 1,45 / 1,12 / 0,32.
+- Ficha usa a plataforma parada da Coleção. Cristal usa os materiais e o idle dos outros menus.
+- Site do catálogo (catalogo-bichos.vercel.app) ainda sem skills; tem atributos base do Halan (escala diferente das fichas) e 5 bichos novos.
