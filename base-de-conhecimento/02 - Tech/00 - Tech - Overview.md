@@ -51,4 +51,4 @@ Casa: **Cursor** neste workspace. GPT-6 Astra (OpenAI, set/2026) é modelo, não
 
 ## Notas relacionadas
 
-- [[00 - Overview]] · [[00 - Log de Decisões]] · [[01 - Unity - Licença e custo]] · [[02 - Produção Loop 1]] · [[00 - Godot vs Unity]] · [[00 - GPT-6 Astra vs Cursor]]
+- [[00 - Overview]] · [[00 - Log de Decisões]] · [[01 - Unity - Licença e custo]] · [[01 - Movimento orgânico]] · [[02 - Produção Loop 1]] · [[00 - Godot vs Unity]] · [[00 - GPT-6 Astra vs Cursor]]
