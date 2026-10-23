@@ -7,6 +7,7 @@ Este escritório nasceu no Cursor. A fonte de verdade continua em `AGENTS.md` e 
 @.cursor/rules/safety.mdc
 @.cursor/rules/fichas-de-criaturas.mdc
 @.cursor/rules/vault.mdc
+@../unity/.cursor/rules/jose-guia.mdc
 @../unity/.cursor/rules/hud.mdc
 
 ## Ambiente no Claude Code
