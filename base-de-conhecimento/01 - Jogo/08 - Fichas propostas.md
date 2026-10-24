@@ -189,3 +189,7 @@ Summoners War (SW): cada monstro com um papel claro, controle em área com chanc
 - [[00 - Overview]] · [[07 - Kickoff 19 set]] · [[04 - Recortes de inspiração]]
 
 Tarefa no Linear para o Halan analisar: POK-232 (24 out 2026), com o conteúdo desta nota inteiro na descrição.
+
+## Efeitos visuais (24 out 2026)
+
+Os 32 efeitos das skills propostas ja estao no jogo, guardados e sem uso na luta: `Arena3v3/MonsterSpellFx.Proposals.cs` e o shader `ModernVfx`. Toca-se pela Bancada de efeitos (Game > VFX), secao "Propostas". Pra ligar numa skill, o Motion recebe `proposta:<id>`.
