@@ -35,4 +35,4 @@ Arte do Loop 1: **3D**. Placeholder: Meshy Free; conceito: Higgsfield se útil.
 
 ## Notas relacionadas
 
-- [[00 - Overview]] · [[00 - Log de Decisões]] · [[00 - Tech - Overview]] · [[00 - Index]] · [[07 - Kickoff 19 set]]
+- [[00 - Overview]] · [[00 - Log de Decisões]] · [[00 - Tech - Overview]] · [[00 - Index]] · [[07 - Kickoff 19 set]] · [[08 - Fichas propostas]]
