@@ -1,6 +1,6 @@
 ---
 tags: [jogo, mapas, 3v3, conceito]
-status: proposta
+status: em-construcao
 criado: 2026-10-24
 ---
 
@@ -47,3 +47,7 @@ Cena de jogo estilo fantasia sombria pintada à mão, vista de cima em ângulo d
 ## Notas relacionadas
 
 - [[00 - Overview]] · [[04 - Recortes de inspiração]]
+
+## Em construcao (24 out 2026, noite)
+
+Raphael aprovou as duas imagens do Gemini. Estrutura no codigo: `MaresArena.cs` e `CatedralArena.cs` (commit 014b7dc na main), texturas do SpriteCook em `Cenario/Resources/Mares` e `Catedral` (anel de runas, areia, vitral, parede). Faltam as pecas da Tripo. Tarefas no Linear: Santuario das Mares e Catedral Submersa.
