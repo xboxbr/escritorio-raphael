@@ -1,6 +1,6 @@
 ---
 tags: [jogo, bichos, skills, proposta]
-status: proposta
+status: ativa-no-jogo
 criado: 2026-10-24
 ---
 
@@ -193,3 +193,7 @@ Tarefa no Linear para o Halan analisar: POK-232 (24 out 2026), com o conteúdo d
 ## Efeitos visuais (24 out 2026)
 
 Os 32 efeitos das skills propostas ja estao no jogo, guardados e sem uso na luta: `Arena3v3/MonsterSpellFx.Proposals.cs` e o shader `ModernVfx`. Toca-se pela Bancada de efeitos (Game > VFX), secao "Propostas". Pra ligar numa skill, o Motion recebe `proposta:<id>`.
+
+## Ativadas no jogo (24 out 2026, noite)
+
+Raphael mandou ativar sem esperar o Halan ("se ele nao gostar, muda depois"). As oito fichas estao nos assets `Bicho NN` como propostas aqui, com as alternativas prontas nas tres regras novas. Cada skill aponta `Motion = proposta:<id>` (efeito + movimento). Sem icones proprios ainda (glifo automatico).
