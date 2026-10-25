@@ -260,3 +260,7 @@ Estas regras substituem a configuração inicial do Shadowmane. Raphael optou po
 - Cor dos bichos por mapa (Game > VFX > Cor dos bichos): saturação/contraste da textura por blit, luz própria e sombra até 3; os bichos não recebem sombra projetada. Rift aprovada em 1,45 / 1,12 / 0,32.
 - Ficha usa a plataforma parada da Coleção. Cristal usa os materiais e o idle dos outros menus.
 - Site do catálogo (catalogo-bichos.vercel.app) ainda sem skills; tem atributos base do Halan (escala diferente das fichas) e 5 bichos novos.
+
+## Atributos do catalogo no jogo (24 out, noite)
+
+- Raphael escolheu adotar os atributos base do Halan (catalogo-bichos.vercel.app, 18 out) nos 13 bichos, com regra unica: HP x0,65; ataques e defesas /9; velocidade /10. Golpes das fichas propostas seguem o ataque predominante do catalogo (Aurion e Lithon especiais, Tidepaw fisico). O site segue sem skills.
