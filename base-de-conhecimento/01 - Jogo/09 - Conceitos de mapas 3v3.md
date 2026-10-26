@@ -42,6 +42,8 @@ Cena de jogo estilo fantasia sombria pintada à mão, vista de cima em ângulo d
 
 Pedido do Raphael (26 out 2026): uma arena 3v3 com lava, a batalha dentro de um vulcão, com uma plataforma ou ponte no meio e lava embaixo.
 
+Imagem aprovada e arena montada no jogo no mesmo dia (`VulcaoArena.cs`, shaders `Lava` e `VulcaoSky`, peças em `Cenario/Resources/GargantaDoVulcao`): ponte, disco, lava, paredes, luzes, fagulhas e cinzas em código; sexta carta na escolha de área. Falta o teste do Raphael e os ajustes de posição das peças.
+
 - **Onde:** o interior da cratera de um vulcão ativo, visto de dentro. A luta acontece numa ponte larga de pedra negra que atravessa a garganta de um lado ao outro, com o meio alargado num círculo de laje de obsidiana onde as seis criaturas ficam. Abaixo, um lago de lava laranja que borbulha e cospe fagulhas; dos dois lados, as paredes da cratera sobem em rocha escura com veios de magma correndo pelas rachaduras. Ao fundo, a boca do vulcão aberta pro céu vermelho de fumaça, com cinzas caindo.
 - **Luz:** vem de baixo. A lava ilumina tudo em laranja pela borda da ponte e pelas barrigas das criaturas; o céu de fumaça dá um vermelho fraco por cima. Quente e escura ao mesmo tempo: a ponte é preta, a luz é de brasa.
 - **O que o torna diferente:** é o primeiro mapa onde o perigo está embaixo. A ponte tem borda sem parapeito, a lava mexe e cospe o tempo todo, fagulhas sobem e cinzas descem. Nem flutua nem é chão: é uma passagem.
