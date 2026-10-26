@@ -38,6 +38,24 @@ Cena de jogo estilo fantasia pintada à mão, vista de cima em ângulo de 35 gra
 Cena de jogo estilo fantasia sombria pintada à mão, vista de cima em ângulo de 35 graus como câmera de batalha de jogo mobile, formato 16:9. O interior de uma catedral antiga afundada: um salão alagado com água negra parada, e no centro uma plataforma de pedra escura que sobrou do piso, vazia no meio para seis criaturas lutarem. Colunas góticas cobertas de algas e correntes enferrujadas sobem até se perder no escuro, vitrais quebrados lá no alto deixam entrar feixes de luar azul que refletem trêmulos na água. Candelabros de ferro caídos, uma estátua de anjo sem cabeça coberta de limo, velas verdes fantasmagóricas em nichos. Sem céu, lugar fechado, muito escuro com azul e verde, reflexos na água. Sem personagens, sem texto, estilo coerente com um jogo de criaturas colecionáveis.
 ```
 
+## Fogo · Garganta do Vulcão (ponte sobre a lava)
+
+Pedido do Raphael (26 out 2026): uma arena 3v3 com lava, a batalha dentro de um vulcão, com uma plataforma ou ponte no meio e lava embaixo.
+
+- **Onde:** o interior da cratera de um vulcão ativo, visto de dentro. A luta acontece numa ponte larga de pedra negra que atravessa a garganta de um lado ao outro, com o meio alargado num círculo de laje de obsidiana onde as seis criaturas ficam. Abaixo, um lago de lava laranja que borbulha e cospe fagulhas; dos dois lados, as paredes da cratera sobem em rocha escura com veios de magma correndo pelas rachaduras. Ao fundo, a boca do vulcão aberta pro céu vermelho de fumaça, com cinzas caindo.
+- **Luz:** vem de baixo. A lava ilumina tudo em laranja pela borda da ponte e pelas barrigas das criaturas; o céu de fumaça dá um vermelho fraco por cima. Quente e escura ao mesmo tempo: a ponte é preta, a luz é de brasa.
+- **O que o torna diferente:** é o primeiro mapa onde o perigo está embaixo. A ponte tem borda sem parapeito, a lava mexe e cospe o tempo todo, fagulhas sobem e cinzas descem. Nem flutua nem é chão: é uma passagem.
+- **Peças novas (Tripo):** pilar de obsidiana rachado com magma dentro, ponte de pedra negra em arco (a peça central), rocha vulcânica com crosta de lava, caveira de dragão de pedra meio derretida, corrente de ferro com argola presa na parede.
+- **Peças reaproveitadas:** braseiro do Zênite como tocheiro de ferro, escombro do Rift como pedra negra, fagulhas e brasas do Cinderplate como partículas do lago.
+- **Aura:** média (0,06 em repouso, 0,12 na skill): escuro como o Rift, mas a lava já joga luz por baixo.
+- **Água e lava no código:** o lago usa o shader da água das Marés com cor de brasa e ondulação lenta, mais emissão forte e um ruído de crosta escura por cima. As fagulhas são o sistema de brasas do Cinderplate em escala grande.
+
+### Prompt da imagem (Gemini)
+
+```
+Cena de jogo estilo fantasia pintada à mão, vista de cima em ângulo de 35 graus como câmera de batalha de jogo mobile, formato 16:9. O interior da cratera de um vulcão ativo. No centro, uma ponte larga de pedra negra atravessa a garganta de um lado ao outro, com o meio alargado num círculo de obsidiana polida, vazio para seis criaturas lutarem, sem parapeito. Abaixo da ponte, um lago de lava laranja borbulhando e cuspindo fagulhas, com crosta escura rachada. Dos dois lados, as paredes da cratera sobem em rocha vulcânica escura com veios de magma brilhando nas rachaduras, pilares de obsidiana rachados, uma caveira de dragão de pedra meio derretida, correntes de ferro presas na parede, tocheiros de ferro. Ao fundo, a boca do vulcão aberta para um céu vermelho de fumaça com cinzas caindo. A luz vem de baixo, laranja de brasa, iluminando a borda da ponte; o resto escuro e quente. Sem personagens, sem texto, cores fortes de laranja, vermelho e preto, estilo coerente com um jogo de criaturas colecionáveis.
+```
+
 ## Como seguem
 
 1. Raphael gera as duas imagens e escolhe (ou manda refazer).
