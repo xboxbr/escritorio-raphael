@@ -6,7 +6,7 @@ criado: 2026-10-25
 
 # 10 - Fichas dos quatro bichos do catálogo (Veinyx, Groveback, Pyrantis, Gildelle)
 
-Pedido do Raphael (24 out, noite): os quatro bichos novos do catálogo do Halan entram no jogo com atributos do site, skills no estilo das propostas, efeitos visuais e movimentos. Texto abaixo é o que vai pro Halan revisar. Tudo já está no jogo (Bichos 16 a 19). Malhas da Tripo **sem esqueleto** por enquanto: o corpo se move inteiro (dash, salto, recuo), os ossos entram quando o Raphael rigar na Nira e trocar o arquivo, como nos 13.
+Pedido do Raphael (24 out, noite): os quatro bichos novos do catálogo do Halan entram no jogo com atributos do site, skills no estilo das propostas, efeitos visuais e movimentos. Texto abaixo é o que vai pro Halan revisar. Tudo já está no jogo (Bichos 16 a 19). Esqueletos do Tripo Studio: Veinyx, Groveback e Pyrantis em 25 out, Gildelle em 26 out (rig veio meio nomeado, meio numerado e sem osso de cabeça; o jogo tem um ramo próprio pra ele em `BoneMotion`).
 
 Controles usados sem repetir os dos outros: Veinyx fica com Veneno e Bloqueio de Cura; Groveback com redução de velocidade e corte de dano; Pyrantis com Queimadura (ninguém tinha); Gildelle com redução de defesa, imunidade e corte de dano cíclico.
 
